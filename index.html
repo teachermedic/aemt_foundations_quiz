@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AEMT Foundational Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>AEMT Knowledge Assessment</h1>
+        
+        <div id="setup-area">
+            <p>Choose your mode to begin:</p>
+            <button onclick="startQuiz('review')">Review Mode (Instant Feedback)</button>
+            <button onclick="startQuiz('exam')">Exam Mode (Final Score Only)</button>
+        </div>
 
+        <div id="quiz-area" style="display:none;">
+            <div id="progress"></div>
+            <div id="question-text"></div>
+            <div id="options-container"></div>
+            <button id="action-btn" onclick="handleAction()">Submit Answer</button>
+            <div id="feedback"></div>
+        </div>
+
+        <div id="results-area" style="display:none;">
+            <h2>Quiz Results</h2>
+            <p id="score-display"></p>
+            <button onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
