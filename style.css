@@ -27,27 +27,23 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-h1 {
-    color: var(--primary-blue);
-    text-align: center;
-    font-size: 2.8rem; /* Extra large for branding */
-    margin-bottom: 5px;
-}
+h1 { color: var(--primary-blue); text-align: center; font-size: 2.8rem; margin-bottom: 5px; }
+.subtitle { text-align: center; color: #7f8c8d; font-weight: 400; margin-bottom: 40px; font-size: 1.5rem; }
 
-.subtitle {
-    text-align: center; 
-    color: #7f8c8d; 
-    font-weight: 400; 
-    margin-bottom: 40px;
-    font-size: 1.5rem;
-}
-
-#question-text {
+#timer-container {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #222;
+    background: #fff5f5;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--error-red);
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--error-red);
+    font-weight: bold;
 }
+
+#question-text { font-size: 1.6rem; font-weight: 700; margin-bottom: 30px; color: #222; }
 
 .option-item {
     border: 3px solid #edf2f7;
@@ -58,48 +54,20 @@ h1 {
     align-items: center;
 }
 
-.option-item input {
-    width: 25px;
-    height: 25px;
-    margin-right: 20px;
-}
-
-.option-item label {
-    font-size: 1.3rem;
-    width: 100%;
-}
+.option-item input { width: 25px; height: 25px; margin-right: 20px; }
+.option-item label { font-size: 1.3rem; width: 100%; }
 
 button {
-    width: 100%;
-    padding: 20px;
-    border: none;
-    border-radius: 12px;
-    background-color: var(--primary-blue);
-    color: white;
-    font-size: 1.4rem;
-    font-weight: bold;
-    cursor: pointer;
+    width: 100%; padding: 20px; border: none; border-radius: 12px;
+    background-color: var(--primary-blue); color: white;
+    font-size: 1.4rem; font-weight: bold; cursor: pointer;
 }
 
-/* Results Card Styling */
 #final-results-card {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    border: 2px solid var(--accent-blue);
-    margin-bottom: 20px;
+    background: #f8f9fa; padding: 30px; border-radius: 12px;
+    text-align: center; border: 2px solid var(--accent-blue); margin-bottom: 20px;
 }
 
-#score-display {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-blue);
-    margin: 0;
-}
-
-#percentage-display {
-    font-size: 1.5rem;
-    color: var(--accent-blue);
-    margin-top: 10px;
-}
+#score-display { font-size: 2rem; font-weight: bold; color: var(--primary-blue); }
+#percentage-display { font-size: 1.5rem; color: var(--accent-blue); margin: 10px 0; }
+#pass-status { font-size: 1.8rem; font-weight: 900; }
