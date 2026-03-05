@@ -14,10 +14,14 @@
         <div id="setup-area">
             <p style="text-align: center; margin-bottom: 30px;">Select your study mode for Chapters 1-6.</p>
             <button onclick="startQuiz('review')">Option 1: Review Mode (Instant Feedback)</button>
-            <button onclick="startQuiz('exam')">Option 2: Exam Mode (Final Score)</button>
+            <button onclick="startQuiz('exam')">Option 2: Exam Mode (Timer & Final Score)</button>
         </div>
 
         <div id="quiz-area" style="display:none;">
+            <div id="timer-container" style="display:none;">
+                Time Remaining: <span id="timer">30:00</span>
+            </div>
+            
             <div id="progress"></div>
             <div id="question-text"></div>
             <div id="options-container"></div>
@@ -30,6 +34,7 @@
             <div id="final-results-card">
                 <p id="score-display"></p>
                 <p id="percentage-display"></p>
+                <p id="pass-status"></p>
             </div>
             <button onclick="location.reload()">Restart Session</button>
         </div>
