@@ -68,4 +68,123 @@ const quizData = [
     { q: "The maximum recommended weight for a 2-person lift is:", options: ["150 lbs", "250 lbs", "400 lbs", "No limit"], answer: ["250 lbs"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "250 lbs is the standard safety benchmark." },
     { q: "Which stretcher can be split to fit around a patient without rolling them?", options: ["Portable stretcher", "Basket stretcher", "Scoop stretcher", "Wheeled stretcher"], answer: ["Scoop stretcher"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Scoop stretchers 'scoop' the patient from both sides." },
     { q: "When pulling a patient, keep your back:", options: ["Bent", "Curved", "Locked and straight", "Twisted"], answer: ["Locked and straight"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Keeping the spine in line prevents disc injuries." },
-    { q: "A 'Bariatric Stretcher' is designed for:", options: ["Pediatric patients", "Obese patients", "Trauma patients", "Cardiac patients"], answer: ["
+    { q: "A 'Bariatric Stretcher' is designed for:", options: ["Pediatric patients", "Obese patients", "Trauma patients", "Cardiac patients"], answer: ["Obese patients"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Bariatric equipment has higher weight capacities and wider frames." },
+    { q: "What should you do before every lift?", options: ["Run to the patient", "Estimate the weight", "Call for backup immediately", "Lift with your back"], answer: ["Estimate the weight"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Assessing the load prevents injuries before they happen." }
+];
+
+// ... logic for adaptive, stats, and timer ...
+let sessionQuestions = [];
+let currentIdx = 0;
+let score = 0;
+let mode = '';
+let timerInterval;
+let timeLeft = 3600; // 60 mins for 60 questions
+let categoryStats = {};
+
+function startQuiz(selectedMode) {
+    mode = selectedMode;
+    document.getElementById('setup-area').style.display = 'none';
+    document.getElementById('quiz-area').style.display = 'block';
+
+    const history = JSON.parse(localStorage.getItem('quiz_history') || "{}");
+    
+    // Adaptive Logic: Show failed questions first
+    sessionQuestions = [...quizData].sort((a, b) => {
+        const failA = history[a.q] ? history[a.q].fail : 0;
+        const failB = history[b.q] ? history[b.q].fail : 0;
+        return failB - failA;
+    });
+
+    if (mode === 'exam') {
+        document.getElementById('timer-container').style.display = 'block';
+        startTimer();
+    }
+    showQuestion();
+}
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        let mins = Math.floor(timeLeft / 60);
+        let secs = timeLeft % 60;
+        document.getElementById('timer-display').innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        if (timeLeft <= 0) { clearInterval(timerInterval); showResults(); }
+    }, 1000);
+}
+
+function showQuestion() {
+    const data = sessionQuestions[currentIdx];
+    document.getElementById('progress').innerText = `Question ${currentIdx + 1} of 60 | ${data.category}`;
+    document.getElementById('question-text').innerText = data.q;
+    const container = document.getElementById('options-container');
+    container.innerHTML = '';
+    document.getElementById('feedback').innerText = '';
+
+    data.options.forEach(opt => {
+        const div = document.createElement('div');
+        div.className = "option-item";
+        const input = document.createElement('input');
+        input.type = data.type === 'single' ? 'radio' : 'checkbox';
+        input.name = "option";
+        input.value = opt;
+        input.id = opt;
+        const label = document.createElement('label');
+        label.htmlFor = opt;
+        label.innerText = opt;
+        div.appendChild(input);
+        div.appendChild(label);
+        div.onclick = () => input.click();
+        container.appendChild(div);
+    });
+}
+
+function handleAction() {
+    const selected = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(i => i.value);
+    if (selected.length === 0) return alert("Select an answer.");
+
+    const q = sessionQuestions[currentIdx];
+    const isCorrect = selected.length === q.answer.length && selected.every(v => q.answer.includes(v));
+
+    let history = JSON.parse(localStorage.getItem('quiz_history') || "{}");
+    if (!history[q.q]) history[q.q] = { pass: 0, fail: 0 };
+    isCorrect ? history[q.q].pass++ : history[q.q].fail++;
+    localStorage.setItem('quiz_history', JSON.stringify(history));
+
+    if (!categoryStats[q.category]) categoryStats[q.category] = { correct: 0, total: 0 };
+    categoryStats[q.category].total++;
+    if (isCorrect) categoryStats[q.category].correct++;
+
+    if (mode === 'review') {
+        const fb = document.getElementById('feedback');
+        fb.innerHTML = isCorrect ? `<b style="color:green">Correct!</b>` : `<b style="color:red">Incorrect.</b> Answer: ${q.answer.join(", ")}`;
+        fb.innerHTML += `<br><small>${q.rationale}</small>`;
+        if (isCorrect) score++;
+        const btn = document.getElementById('action-btn');
+        btn.innerText = "Next Question";
+        btn.onclick = () => {
+            currentIdx++;
+            if (currentIdx < 60) { showQuestion(); btn.innerText = "Submit Answer"; btn.onclick = handleAction; }
+            else showResults();
+        };
+    } else {
+        if (isCorrect) score++;
+        currentIdx++;
+        currentIdx < 60 ? showQuestion() : showResults();
+    }
+}
+
+function showResults() {
+    clearInterval(timerInterval);
+    document.getElementById('quiz-area').style.display = 'none';
+    document.getElementById('results-area').style.display = 'block';
+    const percent = Math.round((score / 60) * 100);
+    document.getElementById('score-display').innerText = `Total Score: ${score} / 60`;
+    document.getElementById('percentage-display').innerText = `${percent}%`;
+    
+    let breakdownHTML = "<strong>Mastery by Chapter:</strong><br>";
+    for (const cat in categoryStats) {
+        let catPercent = Math.round((categoryStats[cat].correct / categoryStats[cat].total) * 100);
+        breakdownHTML += `${cat}: ${catPercent}%<br>`;
+    }
+    document.getElementById('category-breakdown').innerHTML = breakdownHTML;
+}
