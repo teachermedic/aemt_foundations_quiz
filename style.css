@@ -30,20 +30,28 @@ body {
 h1 { color: var(--primary-blue); text-align: center; font-size: 2.8rem; margin-bottom: 5px; }
 .subtitle { text-align: center; color: #7f8c8d; font-weight: 400; margin-bottom: 40px; font-size: 1.5rem; }
 
+/* The Timer Box */
 #timer-container {
+    display: none; /* Hidden by default, shown via JS */
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     background: #fff5f5;
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid var(--error-red);
+    padding: 20px;
+    border-radius: 12px;
+    border: 3px solid var(--error-red);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--error-red);
     font-weight: bold;
 }
 
 #question-text { font-size: 1.6rem; font-weight: 700; margin-bottom: 30px; color: #222; }
+
+/* Spacing out the Mode Buttons */
+.mode-btn {
+    display: block;
+    margin-bottom: 20px; /* This ensures the buttons don't touch */
+}
 
 .option-item {
     border: 3px solid #edf2f7;
@@ -58,7 +66,7 @@ h1 { color: var(--primary-blue); text-align: center; font-size: 2.8rem; margin-b
 .option-item label { font-size: 1.3rem; width: 100%; }
 
 button {
-    width: 100%; padding: 20px; border: none; border-radius: 12px;
+    width: 100%; padding: 22px; border: none; border-radius: 12px;
     background-color: var(--primary-blue); color: white;
     font-size: 1.4rem; font-weight: bold; cursor: pointer;
 }
@@ -68,6 +76,6 @@ button {
     text-align: center; border: 2px solid var(--accent-blue); margin-bottom: 20px;
 }
 
-#score-display { font-size: 2rem; font-weight: bold; color: var(--primary-blue); }
-#percentage-display { font-size: 1.5rem; color: var(--accent-blue); margin: 10px 0; }
-#pass-status { font-size: 1.8rem; font-weight: 900; }
+#score-display { font-size: 2.2rem; font-weight: bold; color: var(--primary-blue); }
+#percentage-display { font-size: 1.8rem; color: var(--accent-blue); margin: 15px 0; }
+#pass-status { font-size: 2rem; font-weight: 900; }
