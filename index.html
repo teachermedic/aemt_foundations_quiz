@@ -13,13 +13,13 @@
         
         <div id="setup-area">
             <p style="text-align: center; margin-bottom: 30px;">Select your study mode for Chapters 1-6.</p>
-            <button onclick="startQuiz('review')">Option 1: Review Mode (Instant Feedback)</button>
-            <button onclick="startQuiz('exam')">Option 2: Exam Mode (Timer & Final Score)</button>
+            <button class="mode-btn" onclick="startQuiz('review')">Option 1: Review Mode (Instant Feedback)</button>
+            <div style="height: 25px;"></div> <button class="mode-btn" onclick="startQuiz('exam')">Option 2: Exam Mode (Timer & Final Score)</button>
         </div>
 
         <div id="quiz-area" style="display:none;">
-            <div id="timer-container" style="display:none;">
-                Time Remaining: <span id="timer">30:00</span>
+            <div id="timer-container">
+                Time Remaining: <span id="timer-display">30:00</span>
             </div>
             
             <div id="progress"></div>
