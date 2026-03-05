@@ -9,12 +9,12 @@
 <body>
     <div id="quiz-container">
         <h1>Eric J's Field Notes</h1>
-        <h2 style="text-align: center; color: #7f8c8d; font-weight: 400; margin-top: -10px;">AEMT Foundation Prep</h2>
+        <h2 class="subtitle">AEMT Foundation Prep</h2>
         
         <div id="setup-area">
-            <p style="text-align: center; margin-bottom: 30px;">Select a mode to begin your assessment of Chapters 1-6.</p>
+            <p style="text-align: center; margin-bottom: 30px;">Select your study mode for Chapters 1-6.</p>
             <button onclick="startQuiz('review')">Option 1: Review Mode (Instant Feedback)</button>
-            <button onclick="startQuiz('exam')">Option 2: Exam Mode (Randomized)</button>
+            <button onclick="startQuiz('exam')">Option 2: Exam Mode (Final Score)</button>
         </div>
 
         <div id="quiz-area" style="display:none;">
@@ -27,7 +27,10 @@
 
         <div id="results-area" style="display:none;">
             <h2>Assessment Complete</h2>
-            <p id="score-display" style="font-size: 1.5rem; text-align: center; font-weight: bold;"></p>
+            <div id="final-results-card">
+                <p id="score-display"></p>
+                <p id="percentage-display"></p>
+            </div>
             <button onclick="location.reload()">Restart Session</button>
         </div>
     </div>
