@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AEMT Foundational Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric J's Field Notes | AEMT Prep</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="quiz-container">
-        <h1>AEMT Knowledge Assessment</h1>
+        <h1>Eric J's Field Notes</h1>
+        <h2 style="text-align: center; color: #7f8c8d; font-weight: 400; margin-top: -10px;">AEMT Foundation Prep</h2>
         
         <div id="setup-area">
-            <p>Choose your mode to begin:</p>
-            <button onclick="startQuiz('review')">Review Mode (Instant Feedback)</button>
-            <button onclick="startQuiz('exam')">Exam Mode (Final Score Only)</button>
+            <p style="text-align: center; margin-bottom: 30px;">Select a mode to begin your assessment of Chapters 1-6.</p>
+            <button onclick="startQuiz('review')">Option 1: Review Mode (Instant Feedback)</button>
+            <button onclick="startQuiz('exam')">Option 2: Exam Mode (Randomized)</button>
         </div>
 
         <div id="quiz-area" style="display:none;">
@@ -24,9 +26,9 @@
         </div>
 
         <div id="results-area" style="display:none;">
-            <h2>Quiz Results</h2>
-            <p id="score-display"></p>
-            <button onclick="location.reload()">Restart Quiz</button>
+            <h2>Assessment Complete</h2>
+            <p id="score-display" style="font-size: 1.5rem; text-align: center; font-weight: bold;"></p>
+            <button onclick="location.reload()">Restart Session</button>
         </div>
     </div>
     <script src="script.js"></script>
