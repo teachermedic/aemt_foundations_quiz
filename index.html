@@ -13,18 +13,30 @@
         <h2 class="subtitle">AEMT Foundation Prep</h2>
         
         <div id="setup-area">
-            <p style="text-align: center; margin-bottom: 30px;">Select your study mode for Chapters 1-6.</p>
+            <p style="text-align: center; margin-bottom: 10px;">Customize your study session:</p>
+            
+            <div id="slider-box">
+                <label for="question-slider">
+                    Number of Questions: <span id="question-count-label">30</span>
+                </label>
+                <input type="range" id="question-slider" min="10" max="60" value="30" step="5" oninput="updateSliderLabel(this.value)">
+                <p id="time-estimate">
+                    <span class="material-icons" style="font-size: 1rem; vertical-align: middle;">schedule</span> 
+                    Estimated Time: <span id="time-estimate-label">60</span> minutes
+                </p>
+            </div>
+
             <button class="mode-btn" onclick="startQuiz('review')">
                 <span class="material-icons">menu_book</span> Option 1: Review Mode
             </button>
-            <div style="height: 20px;"></div>
+            <div style="height: 15px;"></div>
             <button class="mode-btn" onclick="startQuiz('exam')">
                 <span class="material-icons">timer</span> Option 2: Exam Mode
             </button>
         </div>
 
         <div id="quiz-area" style="display:none;">
-            <div id="timer-container">Time Remaining: <span id="timer-display">60:00</span></div>
+            <div id="timer-container">Time Remaining: <span id="timer-display">00:00</span></div>
             <div id="progress"></div>
             <div id="question-text"></div>
             <div id="options-container"></div>
@@ -41,7 +53,7 @@
                 <p id="pass-status"></p>
             </div>
 
-            <div id="subscription-zone" style="margin-top: 30px; text-align: center; padding-top: 20px; border-top: 2px solid #eee;">
+            <div id="subscription-zone">
                 <p style="font-weight: bold; margin-bottom: 15px;">Subscribe for Chapter Analysis & Field Notes:</p>
                 <iframe src="https://ericjm.substack.com/embed" width="100%" height="320" style="border: 1px solid #EEE; background: white; border-radius: 12px;" frameborder="0" scrolling="no"></iframe>
             </div>
