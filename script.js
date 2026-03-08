@@ -1,75 +1,75 @@
-    const quizData = [
-    // CHAPTER 1: EMS SYSTEMS
-    { q: "Which 1966 document is considered the 'birth' of modern EMS?", options: ["The ADA Act", "The White Paper", "The EMS Agenda for the Future", "The Orange Book"], answer: ["The White Paper"], type: "single", category: "Ch 1: EMS Systems", rationale: "Accidental Death and Disability: The Neglected Disease of Modern Society (The White Paper) exposed the inadequacy of prehospital care." },
-    { q: "An AEMT's scope of practice includes which of the following?", options: ["Surgical airways", "IV therapy and limited advanced meds", "Open heart massage", "Prescribing antibiotics"], answer: ["IV therapy and limited advanced meds"], type: "single", category: "Ch 1: EMS Systems", rationale: "AEMTs are trained in foundational ALS skills like IV access and specific medications." },
-    { q: "Online medical direction is best described as:", options: ["Following written protocols", "Real-time radio or phone consultation", "Monthly training sessions", "Reading a textbook"], answer: ["Real-time radio or phone consultation"], type: "single", category: "Ch 1: EMS Systems", rationale: "Online direction happens in real-time; offline direction is via standing orders/protocols." },
-    { q: "What is the primary purpose of CQI?", options: ["Punishing clinical errors", "Improving patient care", "Reducing ambulance fuel costs", "Increasing call volume"], answer: ["Improving patient care"], type: "single", category: "Ch 1: EMS Systems", rationale: "Continuous Quality Improvement is a non-punitive process to improve clinical outcomes." },
-    { q: "Which level of EMS provider is the foundation for all others?", options: ["EMR", "EMT", "AEMT", "Paramedic"], answer: ["EMT"], type: "single", category: "Ch 1: EMS Systems", rationale: "The EMT level provides the fundamental emergency care and assessment foundation." },
-    { q: "The ADA (Americans with Disabilities Act) specifically protects:", options: ["Unqualified applicants", "Qualified individuals with disabilities", "Physicians only", "Patients only"], answer: ["Qualified individuals with disabilities"], type: "single", category: "Ch 1: EMS Systems", rationale: "The ADA ensures equal opportunity for qualified workers in the workplace." },
-    { q: "Who has the ultimate legal authority for patient care in an EMS system?", options: ["The Fire Chief", "The Hospital CEO", "The Medical Director", "The Senior Paramedic"], answer: ["The Medical Director"], type: "single", category: "Ch 1: EMS Systems", rationale: "All EMS care is provided under the license and oversight of a Medical Director." },
-    { q: "Public Health focuses on which of the following?", options: ["Treating a single cardiac arrest", "Population-wide injury prevention", "Billing patients", "Radio maintenance"], answer: ["Population-wide injury prevention"], type: "single", category: "Ch 1: EMS Systems", rationale: "Public health focuses on preventing disease and injury across communities." },
-    { q: "EMS Research is vital because it leads to:", options: ["Higher pay", "Evidence-based medicine", "Fewer calls", "Better uniforms"], answer: ["Evidence-based medicine"], type: "single", category: "Ch 1: EMS Systems", rationale: "Research ensures our treatments are based on proven scientific outcomes." },
-    { q: "The NREMT provides which of the following?", options: ["State licensure", "National competency certification", "Liability insurance", "Labor union representation"], answer: ["National competency certification"], type: "single", category: "Ch 1: EMS Systems", rationale: "NREMT is a certifying body that ensures a national standard of competency." },
+const quizData = [
+    // CHAPTER 1 (10 QUESTIONS)
+    { q: "Accidental Death and Disability: The Neglected Disease of Modern Society is commonly known as what?", options: ["The Orange Book", "The White Paper", "The EMS Blueprint", "The NHTSA Guide"], answer: ["The White Paper"], type: "single", category: "Ch 1: EMS Systems", rationale: "Released in 1966, the White Paper identified the critical need for improved prehospital care." },
+    { q: "Which EMS level is primarily trained in advanced life support (ALS) skills like IV therapy and limited medications?", options: ["EMR", "EMT", "AEMT", "Physician"], answer: ["AEMT"], type: "single", category: "Ch 1: EMS Systems", rationale: "AEMTs bridge the gap between basic and advanced life support." },
+    { q: "The Medical Director provides which of the following for the AEMT?", options: ["Employment", "Legal authority to practice", "Liability insurance", "Vehicle maintenance"], answer: ["Legal authority to practice"], type: "single", category: "Ch 1: EMS Systems", rationale: "EMS providers practice under the license of their Medical Director." },
+    { q: "Which agency regulates the radio frequencies used by EMS?", options: ["NHTSA", "FCC", "NREMT", "FEMA"], answer: ["FCC"], type: "single", category: "Ch 1: EMS Systems", rationale: "The Federal Communications Commission (FCC) manages all radio communications." },
+    { q: "Continuous Quality Improvement (CQI) is designed to be:", options: ["Punitive", "Circular and non-punitive", "Optional", "Managed by the Mayor"], answer: ["Circular and non-punitive"], type: "single", category: "Ch 1: EMS Systems", rationale: "CQI focuses on improving system performance and patient care." },
+    { q: "Public Health focuses on which of the following?", options: ["One patient at a time", "The entire population", "Hospital billing", "Radio maintenance"], answer: ["The entire population"], type: "single", category: "Ch 1: EMS Systems", rationale: "Public health initiatives target health and prevention for the whole community." },
+    { q: "Evidence-based medicine in EMS is primarily driven by:", options: ["Tradition", "EMS Research", "Intuition", "Old protocols"], answer: ["EMS Research"], type: "single", category: "Ch 1: EMS Systems", rationale: "Research provides the evidence to justify changing clinical practices." },
+    { q: "The ADA (Americans with Disabilities Act) protects:", options: ["Unqualified applicants", "Qualified individuals with disabilities", "Physicians only", "Ambulance manufacturers"], answer: ["Qualified individuals with disabilities"], type: "single", category: "Ch 1: EMS Systems", rationale: "The ADA ensures equal opportunity in employment for those with disabilities." },
+    { q: "Online medical direction is characterized by:", options: ["Written protocols", "Real-time radio/phone consultation", "Monthly meetings", "Emailing the Chief"], answer: ["Real-time radio/phone consultation"], type: "single", category: "Ch 1: EMS Systems", rationale: "Online direction is immediate communication during a call." },
+    { q: "The primary purpose of NREMT certification is to:", options: ["Provide a job", "Ensure a national standard of competency", "Provide legal defense", "Pay for licensure"], answer: ["Ensure a national standard of competency"], type: "single", category: "Ch 1: EMS Systems", rationale: "NREMT validates minimum competency across the United States." },
 
-    // CHAPTER 2: SAFETY & WELLNESS
-    { q: "Which of the following is the most effective way to prevent infection?", options: ["Using a gown", "Handwashing", "N95 masks", "Avoiding the patient"], answer: ["Handwashing"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Hand hygiene is the single most important defense against pathogen spread." },
-    { q: "A patient with suspected Tuberculosis (TB) requires which PPE?", options: ["Surgical mask", "N95 or HEPA respirator", "Gloves only", "Goggles only"], answer: ["N95 or HEPA respirator"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "TB is an airborne pathogen requiring high-level filtration." },
-    { q: "What is your FIRST priority at any emergency scene?", options: ["Patient assessment", "Personal safety", "Talking to bystanders", "Documentation"], answer: ["Personal safety"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "If the provider becomes a victim, they cannot help the patient." },
-    { q: "The process of killing most microorganisms on an object is:", options: ["Cleaning", "Disinfection", "Sterilization", "Boiling"], answer: ["Disinfection"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Disinfection kills many pathogens; sterilization kills all life forms." },
-    { q: "Standard Precautions assume which of the following?", options: ["Only elderly patients are contagious", "All body fluids are potentially infectious", "Gloves are never required for IVs", "Patients will tell you if they have HIV"], answer: ["All body fluids are potentially infectious"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Standard precautions treat every fluid as a potential risk." },
-    { q: "A state of chronic physical and emotional exhaustion is called:", options: ["Eustress", "Burnout", "Acute stress", "Delayed stress"], answer: ["Burnout"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Burnout is the long-term result of unresolved professional stress." },
-    { q: "Which Hepatitis strain is primarily spread through blood-to-blood contact?", options: ["Hep A", "Hep B", "Hep E", "Hep G"], answer: ["Hep B"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Hepatitis B is a primary bloodborne concern for healthcare workers." },
-    { q: "If you are exposed to blood, your first clinical step is to:", options: ["Call your supervisor", "Wash the area with soap and water", "Go to the ER", "Finish the call"], answer: ["Wash the area with soap and water"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Immediate decontamination is the priority after an exposure." },
-    { q: "Which stress reaction occurs during or immediately after an incident?", options: ["Delayed", "Acute", "Cumulative", "Post-traumatic"], answer: ["Acute"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Acute stress happens in the moment or shortly thereafter." },
-    { q: "The three stages of stress (Alarm, Resistance, Exhaustion) are part of:", options: ["The Grieving Process", "General Adaptation Syndrome", "Maslow's Hierarchy", "The EMS Agenda"], answer: ["General Adaptation Syndrome"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "GAS describes how the body responds to prolonged stress." },
+    // CHAPTER 2 (10 QUESTIONS)
+    { q: "What is the single most important way to prevent the spread of infection?", options: ["Wearing a gown", "Handwashing", "Always wearing a mask", "Staying in the truck"], answer: ["Handwashing"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Hand hygiene is the #1 defense against pathogen transmission." },
+    { q: "Which PPE is required specifically for suspected Tuberculosis (TB)?", options: ["Surgical mask", "N95 or HEPA respirator", "Gloves only", "No mask needed"], answer: ["N95 or HEPA respirator"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "TB is an airborne pathogen requiring high-level filtration." },
+    { q: "What is your FIRST priority at any scene?", options: ["Patient care", "Personal safety", "Documentation", "Crowd control"], answer: ["Personal safety"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Scene safety prevents the provider from becoming a second victim." },
+    { q: "Which Hepatitis strain is most commonly spread through blood-to-blood contact?", options: ["Hep A", "Hep B", "Hep E", "Hep G"], answer: ["Hep B"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Hepatitis B is a high-risk bloodborne pathogen for EMS." },
+    { q: "If you are exposed to a patient's blood, what is your first step?", options: ["Call your supervisor", "Wash the area with soap and water", "Go to the ER", "Finish the transport"], answer: ["Wash the area with soap and water"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Immediate decontamination is the priority after exposure." },
+    { q: "Standard Precautions assume that:", options: ["Only sick people are infectious", "All body fluids are potentially infectious", "Patients will tell you if they have a virus", "Gloves are only for bleeding"], answer: ["All body fluids are potentially infectious"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Standard precautions protect against unknown risks in every patient." },
+    { q: "The process of killing all microorganisms on an object is:", options: ["Disinfection", "Sterilization", "Cleaning", "Boiling"], answer: ["Sterilization"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Sterilization kills 100% of life forms; disinfection only kills most." },
+    { q: "A state of chronic emotional and physical exhaustion is called:", options: ["Acute stress", "Burnout", "Eustress", "Delayed stress"], answer: ["Burnout"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Burnout is the long-term result of unresolved job stress." },
+    { q: "The three stages of stress (Alarm, Resistance, Exhaustion) are part of:", options: ["Grieving", "General Adaptation Syndrome", "NHTSA Guidelines", "The EMS Agenda"], answer: ["General Adaptation Syndrome"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "GAS describes the physiological response to prolonged stress." },
+    { q: "Which stress reaction occurs days, weeks, or months after a call?", options: ["Acute", "Delayed", "Cumulative", "Eustress"], answer: ["Delayed"], type: "single", category: "Ch 2: Safety & Wellness", rationale: "Delayed reactions (like PTSD) manifest after the event has passed." },
 
-    // CHAPTER 3: MEDICAL/LEGAL
-    { q: "Select the four factors required to prove Negligence:", options: ["Duty to act", "Breach of duty", "Damages", "Proximate cause", "Criminal intent"], answer: ["Duty to act", "Breach of duty", "Damages", "Proximate cause"], type: "multiple", category: "Ch 3: Medical/Legal", rationale: "Negligence requires all 4 factors: duty, breach, harm, and a link between them." },
-    { q: "Which type of consent is assumed for an unconscious patient?", options: ["Informed", "Implied", "Expressed", "Involuntary"], answer: ["Implied"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Implied consent assumes a reasonable person would want life-saving care." },
-    { q: "Ending care without a proper handoff to equal/higher level providers is:", options: ["Assault", "Abandonment", "Kidnapping", "Battery"], answer: ["Abandonment"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Abandonment is a legal failure to maintain the continuum of care." },
-    { q: "Unlawfully touching a patient without their consent is legally:", options: ["Assault", "Battery", "Slander", "Libel"], answer: ["Battery"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Battery is the physical act; assault is the threat or fear of it." },
-    { q: "What law protects the confidentiality of patient information?", options: ["OSHA", "HIPAA", "FERPA", "FEMA"], answer: ["HIPAA"], type: "single", category: "Ch 3: Medical/Legal", rationale: "HIPAA governs the protection of private health data." },
-    { q: "Spoken defamation is known as:", options: ["Libel", "Slander", "Tort", "Protocol"], answer: ["Slander"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Slander is spoken; Libel is written." },
-    { q: "An AEMT's scope of practice is defined by:", options: ["The Dispatcher", "State Law and the Medical Director", "The Hospital Nurse", "The Textbook"], answer: ["State Law and the Medical Director"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Scope of practice defines the legal limits of your skills." },
-    { q: "A 'DNR' order is a type of:", options: ["Refusal form", "Advance Directive", "Police report", "Clinical protocol"], answer: ["Advance Directive"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Advance directives guide care when the patient cannot speak for themselves." },
-    { q: "Who can legally refuse medical care?", options: ["Anyone", "Competent adults", "Minors", "Patients in police custody"], answer: ["Competent adults"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Competency is the legal requirement for refusing life-saving treatment." },
-    { q: "A wrongful act leading to civil legal liability is a:", options: ["Felony", "Misdemeanor", "Tort", "Protocol"], answer: ["Tort"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Most EMS lawsuits fall under the umbrella of tort law." },
+    // CHAPTER 3 (10 QUESTIONS)
+    { q: "Identify the four elements required to prove Negligence:", options: ["Duty, Breach, Damages, Proximate Cause", "Assault, Battery, Intent, Injury", "Duty, Error, Harm, Witness", "Law, Breach, Cost, Pain"], answer: ["Duty, Breach, Damages, Proximate Cause"], type: "multiple", category: "Ch 3: Medical/Legal", rationale: "Negligence requires all 4: Duty, Breach, Damages, and Causation." },
+    { q: "A competent adult has the right to refuse medical care. (T/F)", options: ["True", "False"], answer: ["True"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Autonomy allows competent adults to refuse any/all care." },
+    { q: "Leaving a patient without transferring care to an equal or higher level provider is:", options: ["Assault", "Abandonment", "Battery", "Slander"], answer: ["Abandonment"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Abandonment is a legal failure in the continuum of care." },
+    { q: "Touching a patient without their consent is legally considered:", options: ["Assault", "Battery", "Slander", "Libel"], answer: ["Battery"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Battery is the physical act; assault is the threat or fear." },
+    { q: "What law protects the privacy of patient health information?", options: ["OSHA", "HIPAA", "FEMA", "NHTSA"], answer: ["HIPAA"], type: "single", category: "Ch 3: Medical/Legal", rationale: "HIPAA governs the protection of PHI." },
+    { q: "Assume an unconscious patient wants life-saving care. This is:", options: ["Expressed Consent", "Implied Consent", "Involuntary Consent", "Informed Consent"], answer: ["Implied Consent"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Implied consent applies when the patient cannot speak for themselves." },
+    { q: "Spoken defamation is known as:", options: ["Libel", "Slander", "Negligence", "Abandonment"], answer: ["Slander"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Slander is spoken; Libel is written." },
+    { q: "A DNR order is a type of:", options: ["Refusal form", "Advance Directive", "Insurance policy", "Police report"], answer: ["Advance Directive"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Advance directives specify medical wishes before a crisis." },
+    { q: "A wrongful act leading to civil legal liability is a:", options: ["Felony", "Misdemeanor", "Tort", "Protocol"], answer: ["Tort"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Torts are civil wrongs (like negligence)." },
+    { q: "The scope of practice for an AEMT is defined by:", options: ["The patient", "State law and the Medical Director", "The dispatcher", "The senior partner"], answer: ["State law and the Medical Director"], type: "single", category: "Ch 3: Medical/Legal", rationale: "Scope defines the legal limits of your clinical skills." },
 
-    // CHAPTER 4: COMMUNICATIONS
-    { q: "In the SBAR format, what does 'B' stand for?", options: ["Basic Info", "Background", "Blood Pressure", "Body System"], answer: ["Background"], type: "single", category: "Ch 4: Communications", rationale: "SBAR = Situation, Background, Assessment, Recommendation." },
-    { q: "Which device receives a signal and rebroadcasts it at a higher power?", options: ["Base station", "Mobile radio", "Repeater", "Pager"], answer: ["Repeater"], type: "single", category: "Ch 4: Communications", rationale: "Repeaters overcome distance and terrain barriers." },
-    { q: "What type of question allows a patient to explain in their own words?", options: ["Closed-ended", "Leading", "Open-ended", "Biased"], answer: ["Open-ended"], type: "single", category: "Ch 4: Communications", rationale: "Open-ended questions yield a more complete history." },
-    { q: "If a treatment is not written in the PCR, legally:", options: ["It still happened", "It didn't happen", "The doctor will know", "It's optional"], answer: ["It didn't happen"], type: "single", category: "Ch 4: Communications", rationale: "The legal standard is: If it isn't documented, it didn't happen." },
-    { q: "Which agency regulates all radio communications in the US?", options: ["FAA", "FCC", "FBI", "FDA"], answer: ["FCC"], type: "single", category: "Ch 4: Communications", rationale: "The Federal Communications Commission (FCC) manages radio frequencies." },
-    { q: "To correct an error on a written PCR, you should:", options: ["Use white-out", "Scribble it out", "Draw a single line, initial, and write the correction", "Throw it away"], answer: ["Draw a single line, initial, and write the correction"], type: "single", category: "Ch 4: Communications", rationale: "Proper correction preserves the legal integrity of the document." },
-    { q: "What is 'Telemetry'?", options: ["Radio repair", "Transmission of data (like ECG) to the hospital", "A type of map", "Patient transport"], answer: ["Transmission of data (like ECG) to the hospital"], type: "single", category: "Ch 4: Communications", rationale: "Telemetry allows hospital staff to monitor field data." },
-    { q: "The 'Chief Complaint' is:", options: ["Your final diagnosis", "The patient's reason for calling", "What the family says", "The dispatcher's notes"], answer: ["The patient's reason for calling"], type: "single", category: "Ch 4: Communications", rationale: "The chief complaint is the symptom that led to the 911 call." },
-    { q: "Therapeutic communication includes which of the following?", options: ["Judging the patient", "Active listening and eye contact", "Interrupting", "Standing over the patient"], answer: ["Active listening and eye contact"], type: "single", category: "Ch 4: Communications", rationale: "Rapport is built through respect and active listening." },
-    { q: "The official transfer of care occurs when you:", options: ["Unload the patient", "Give a verbal report to an equal/higher provider", "Leave the hospital", "Finish your PCR"], answer: ["Give a verbal report to an equal/higher provider"], type: "single", category: "Ch 4: Communications", rationale: "Duty remains with you until the handoff report is complete." },
+    // CHAPTER 4 (10 QUESTIONS)
+    { q: "In the SBAR format, what does the 'B' stand for?", options: ["Basic Info", "Background", "Blood Pressure", "Body System"], answer: ["Background"], type: "single", category: "Ch 4: Communications", rationale: "SBAR = Situation, Background, Assessment, Recommendation." },
+    { q: "A device that receives a signal and re-broadcasts it at higher power is a:", options: ["Base station", "Mobile radio", "Repeater", "Pager"], answer: ["Repeater"], type: "single", category: "Ch 4: Communications", rationale: "Repeaters overcome terrain and distance barriers." },
+    { q: "Which type of question allows the patient to explain in their own words?", options: ["Closed-ended", "Open-ended", "Leading", "Biased"], answer: ["Open-ended"], type: "single", category: "Ch 4: Communications", rationale: "Open-ended questions (e.g., 'What happened?') yield better detail." },
+    { q: "If it wasn't written down in the PCR:", options: ["It still happened", "It didn't happen (legally)", "The nurse will know", "It's optional"], answer: ["It didn't happen (legally)"], type: "single", category: "Ch 4: Communications", rationale: "Legally, if an action isn't documented, it never occurred." },
+    { q: "The agency that regulates radio communication is the:", options: ["FAA", "FCC", "FDA", "FBI"], answer: ["FCC"], type: "single", category: "Ch 4: Communications", rationale: "The FCC manages radio airwaves and licensing." },
+    { q: "To correct an error on a written PCR, you should:", options: ["Scribble it out", "Use white-out", "Draw a single line, initial, and write the correction", "Throw it away"], answer: ["Draw a single line, initial, and write the correction"], type: "single", category: "Ch 4: Communications", rationale: "Proper correction maintains the legal integrity of the report." },
+    { q: "Transmission of data (like ECG) to the hospital is called:", options: ["Radio repair", "Telemetry", "A type of map", "Patient transport"], answer: ["Telemetry"], type: "single", category: "Ch 4: Communications", rationale: "Telemetry allows the hospital to monitor field diagnostics." },
+    { q: "The 'Chief Complaint' is defined as:", options: ["Your final diagnosis", "The patient's reason for calling", "The dispatcher's notes", "The patient's medical history"], answer: ["The patient's reason for calling"], type: "single", category: "Ch 4: Communications", rationale: "The CC is why the patient requested help." },
+    { q: "Therapeutic communication includes which of the following?", options: ["Judging the patient", "Active listening and eye contact", "Interrupting frequently", "Standing over the patient"], answer: ["Active listening and eye contact"], type: "single", category: "Ch 4: Communications", rationale: "Active listening builds trust and yields more info." },
+    { q: "Transfer of care happens when you:", options: ["Unload the patient", "Give a verbal report to a provider of equal/higher training", "Leave the hospital", "Finish the PCR"], answer: ["Give a verbal report to a provider of equal/higher training"], type: "single", category: "Ch 4: Communications", rationale: "Verbal report ensures continuity and legal duty transfer." },
 
-    // CHAPTER 5: MEDICAL TERMINOLOGY
-    { q: "What does the prefix 'hypo-' mean?", options: ["High/Above", "Low/Below", "Fast", "Slow"], answer: ["Low/Below"], type: "single", category: "Ch 5: Terminology", rationale: "Hypo (low/below) vs. Hyper (high/above)." },
-    { q: "The term 'Supine' means lying:", options: ["Face down", "Face up", "On the side", "In a chair"], answer: ["Face up"], type: "single", category: "Ch 5: Terminology", rationale: "Supine = Face Up; Prone = Face Down." },
+    // CHAPTER 5 (10 QUESTIONS)
+    { q: "What does the prefix 'hypo-' mean?", options: ["High/Above", "Low/Below", "Fast", "Slow"], answer: ["Low/Below"], type: "single", category: "Ch 5: Terminology", rationale: "Hypo (low), Hyper (high)." },
+    { q: "The term 'Supine' means lying:", options: ["Face down", "Face up", "On the side", "Sitting up"], answer: ["Face up"], type: "single", category: "Ch 5: Terminology", rationale: "Supine = face up; Prone = face down." },
     { q: "Which plane divides the body into top and bottom?", options: ["Sagittal", "Frontal", "Transverse", "Coronal"], answer: ["Transverse"], type: "single", category: "Ch 5: Terminology", rationale: "Transverse is the horizontal plane." },
-    { q: "Proximal means:", options: ["Farther from the trunk", "Closer to the trunk", "The front", "The back"], answer: ["Closer to the trunk"], type: "single", category: "Ch 5: Terminology", rationale: "Proximal is closer to the attachment point." },
-    { q: "The suffix '-ectomy' means:", options: ["Inflammation", "Surgical removal", "Pain", "Hole"], answer: ["Surgical removal"], type: "single", category: "Ch 5: Terminology", rationale: "Ectomy = removal (e.g., Appendectomy)." },
-    { q: "Which quadrant contains the Liver?", options: ["LUQ", "RUQ", "LLQ", "RLQ"], answer: ["RUQ"], type: "single", category: "Ch 5: Terminology", rationale: "The Liver is primarily in the Right Upper Quadrant." },
-    { q: "Anterior refers to which part of the body?", options: ["Back", "Front", "Side", "Top"], answer: ["Front"], type: "single", category: "Ch 5: Terminology", rationale: "Anterior (ventral) is the front of the body." },
-    { q: "What is 'Adduction'?", options: ["Moving away from midline", "Moving toward midline", "Bending a joint", "Straightening a joint"], answer: ["Moving toward midline"], type: "single", category: "Ch 5: Terminology", rationale: "Adduction = 'Add' to the midline." },
-    { q: "Distal means:", options: ["Closer to the trunk", "Farther from the trunk", "The front", "The top"], answer: ["Farther from the trunk"], type: "single", category: "Ch 5: Terminology", rationale: "Distal is distant from the trunk." },
-    { q: "The root 'Cardi/o' refers to:", options: ["Lungs", "Heart", "Brain", "Liver"], answer: ["Heart"], type: "single", category: "Ch 5: Terminology", rationale: "Cardio is the root for heart." },
+    { q: "Proximal means:", options: ["Farther from the trunk", "Closer to the trunk", "The front", "The top"], answer: ["Closer to the trunk"], type: "single", category: "Ch 5: Terminology", rationale: "Proximal is near the point of attachment." },
+    { q: "The suffix '-ectomy' indicates:", options: ["Inflammation", "Surgical removal", "Pain", "Hole"], answer: ["Surgical removal"], type: "single", category: "Ch 5: Terminology", rationale: "Ectomy = removal (e.g., Appendectomy)." },
+    { q: "What quadrant is the Liver primarily in?", options: ["LUQ", "RUQ", "LLQ", "RLQ"], answer: ["RUQ"], type: "single", category: "Ch 5: Terminology", rationale: "The Liver is primarily Right Upper Quadrant." },
+    { q: "Anterior refers to which part of the body?", options: ["Back", "Front", "Side", "Top"], answer: ["Front"], type: "single", category: "Ch 5: Terminology", rationale: "Anterior (ventral) is the front." },
+    { q: "What does the root 'Cardi/o' refer to?", options: ["Lungs", "Brain", "Heart", "Stomach"], answer: ["Heart"], type: "single", category: "Ch 5: Terminology", rationale: "Cardio = Heart." },
+    { q: "A 'Combining Vowel' is usually which letter?", options: ["A", "E", "O", "I"], answer: ["O"], type: "single", category: "Ch 5: Terminology", rationale: "'O' is the standard combining vowel." },
+    { q: "Abduction means moving a limb:", options: ["Toward the midline", "Away from the midline", "Up", "Down"], answer: ["Away from the midline"], type: "single", category: "Ch 5: Terminology", rationale: "Abduct = move away from midline; Adduct = add to midline." },
 
-    // CHAPTER 6: LIFTING & MOVING
-    { q: "The 'Power Lift' technique uses which muscles for the work?", options: ["Back", "Legs", "Arms", "Abs"], answer: ["Legs"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Legs are the body's strongest muscles; the back should remain upright." },
-    { q: "When is a 'Rapid Extrication' technique used?", options: ["When you are late", "When the scene is unsafe or patient is unstable", "For all vehicle accidents", "When the patient is heavy"], answer: ["When the scene is unsafe or patient is unstable"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Rapid extrication moves a patient in <1 min due to urgency." },
-    { q: "Which device is best for moving a patient down stairs?", options: ["Scoop stretcher", "Wheeled stretcher", "Stair chair", "Basket stretcher"], answer: ["Stair chair"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Stair chairs are designed for vertical navigation in tight spots." },
-    { q: "The 'Power Grip' involves having your palms:", options: ["Facing down", "Facing up", "Facing each other", "Overlapping"], answer: ["Facing up"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Palms up is the strongest and safest grip position." },
-    { q: "An 'Emergency Move' is used when:", options: ["The patient is in pain", "There is a fire or explosion risk", "The patient is stable", "To clear the scene faster"], answer: ["There is a fire or explosion risk"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Emergency moves prioritize speed over spinal restriction due to hazards." },
-    { q: "What is the weight limit for a standard 2-person lift?", options: ["150 lbs", "250 lbs", "400 lbs", "No limit"], answer: ["250 lbs"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "250 lbs is the standard safety limit for two providers." },
-    { q: "Which stretcher can be split in half to 'scoop' the patient?", options: ["Portable stretcher", "Basket stretcher", "Scoop stretcher", "Ambulance stretcher"], answer: ["Scoop stretcher"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Scoop stretchers minimize patient movement during pick-up." },
-    { q: "Before every lift, you should first:", options: ["Run to the patient", "Estimate the weight of the load", "Call for a helicopter", "Lift with your back"], answer: ["Estimate the weight of the load"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Assessing the load prevents injuries before they occur." },
-    { q: "A 'Bariatric Stretcher' is designed for:", options: ["Pediatric patients", "Obese patients", "Cardiac patients", "Trauma patients"], answer: ["Obese patients"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Bariatric equipment has higher weight capacities." },
-    { q: "When pulling a patient, you should keep the line of pull:", options: ["Far away from you", "Through the center of your body", "Over your head", "Twisted"], answer: ["Through the center of your body"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Centralizing the load protects the provider's spine." }
+    // CHAPTER 6 (10 QUESTIONS)
+    { q: "The 'Power Lift' technique uses which muscles for the work?", options: ["Back", "Legs", "Arms", "Abs"], answer: ["Legs"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Legs are strongest; back must stay straight." },
+    { q: "When is 'Rapid Extrication' used?", options: ["When late", "Unsafe scene or unstable patient", "For all vehicle accidents", "When patient is heavy"], answer: ["Unsafe scene or unstable patient"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Used when speed is critical for survival." },
+    { q: "Which device is best for moving a patient down stairs?", options: ["Scoop stretcher", "Wheeled stretcher", "Stair chair", "Basket stretcher"], answer: ["Stair chair"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Stair chairs are designed for vertical navigation." },
+    { q: "The 'Power Grip' involves palms facing:", options: ["Down", "Up", "Each other", "Sideways"], answer: ["Up"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Palms up is the strongest/safest grip." },
+    { q: "An 'Emergency Move' is used when:", options: ["Patient is in pain", "Immediate environmental danger (e.g., fire)", "Patient is stable", "To clear the scene faster"], answer: ["Immediate environmental danger (e.g., fire)"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Emergency moves prioritize life over spinal precautions." },
+    { q: "Weight limit for a standard 2-person lift is:", options: ["150 lbs", "250 lbs", "400 lbs", "500 lbs"], answer: ["250 lbs"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "250 lbs is the safety benchmark for 2 providers." },
+    { q: "Which stretcher splits into halves to 'scoop' the patient?", options: ["Portable stretcher", "Basket stretcher", "Scoop stretcher", "Wheeled stretcher"], answer: ["Scoop stretcher"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Scoop stretchers minimize rolling of the patient." },
+    { q: "Before every lift, you should first:", options: ["Run to patient", "Estimate the load weight", "Call for helicopter", "Lift with back"], answer: ["Estimate the load weight"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Assessing load prevents injury." },
+    { q: "A 'Bariatric Stretcher' is used for:", options: ["Infants", "Obese patients", "Cardiac patients", "Trauma patients"], answer: ["Obese patients"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Bariatric equipment has higher weight capacities." },
+    { q: "When pulling, keep the line of pull:", options: ["Far away", "Through the center of your body", "Overhead", "Twisted"], answer: ["Through the center of your body"], type: "single", category: "Ch 6: Lifting/Moving", rationale: "Centralizing pull protects the spine." }
 ];
 
 let sessionQuestions = [];
@@ -77,24 +77,35 @@ let currentIdx = 0;
 let score = 0;
 let mode = '';
 let timerInterval;
-let timeLeft = 3600; // 60 mins
+let timeLeft = 0;
 let categoryStats = {};
+
+function updateSliderLabel(val) {
+    document.getElementById('question-count-label').innerText = val;
+    document.getElementById('time-estimate-label').innerText = val * 2;
+}
 
 function startQuiz(selectedMode) {
     mode = selectedMode;
+    const numToPull = parseInt(document.getElementById('question-slider').value);
+    
     document.getElementById('setup-area').style.display = 'none';
     document.getElementById('quiz-area').style.display = 'block';
 
     const history = JSON.parse(localStorage.getItem('eric_field_notes_history') || "{}");
     
-    // Adaptive Sorting: Prioritize failed questions
-    sessionQuestions = [...quizData].sort((a, b) => {
+    // Adaptive Logic: Show most failed questions first
+    let sortedBank = [...quizData].sort((a, b) => {
         const failA = history[a.q] ? history[a.q].fail : 0;
         const failB = history[b.q] ? history[b.q].fail : 0;
         return failB - failA;
     });
 
+    sessionQuestions = sortedBank.slice(0, numToPull);
+
     if (mode === 'exam') {
+        sessionQuestions.sort(() => Math.random() - 0.5);
+        timeLeft = numToPull * 2 * 60; 
         document.getElementById('timer-container').style.display = 'block';
         startTimer();
     }
@@ -113,7 +124,7 @@ function startTimer() {
 
 function showQuestion() {
     const data = sessionQuestions[currentIdx];
-    document.getElementById('progress').innerText = `Question ${currentIdx + 1} of 60 | ${data.category}`;
+    document.getElementById('progress').innerText = `Question ${currentIdx + 1} of ${sessionQuestions.length} | ${data.category}`;
     document.getElementById('question-text').innerText = data.q;
     const container = document.getElementById('options-container');
     container.innerHTML = '';
@@ -162,13 +173,13 @@ function handleAction() {
         btn.innerText = "Next Question";
         btn.onclick = () => {
             currentIdx++;
-            if (currentIdx < 60) { showQuestion(); btn.innerText = "Submit Answer"; btn.onclick = handleAction; }
+            if (currentIdx < sessionQuestions.length) { showQuestion(); btn.innerText = "Submit Answer"; btn.onclick = handleAction; }
             else showResults();
         };
     } else {
         if (isCorrect) score++;
         currentIdx++;
-        currentIdx < 60 ? showQuestion() : showResults();
+        currentIdx < sessionQuestions.length ? showQuestion() : showResults();
     }
 }
 
@@ -176,8 +187,11 @@ function showResults() {
     clearInterval(timerInterval);
     document.getElementById('quiz-area').style.display = 'none';
     document.getElementById('results-area').style.display = 'block';
-    const percent = Math.round((score / 60) * 100);
-    document.getElementById('score-display').innerText = `Total Score: ${score} / 60`;
+    
+    const totalCount = sessionQuestions.length;
+    const percent = Math.round((score / totalCount) * 100);
+    
+    document.getElementById('score-display').innerText = `Total Score: ${score} / ${totalCount}`;
     document.getElementById('percentage-display').innerText = `${percent}%`;
     
     let breakdownHTML = "<strong>Performance by Chapter:</strong><br>";
