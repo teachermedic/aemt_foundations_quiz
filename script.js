@@ -1,35 +1,4 @@
-const quizData = [
-    // FOUNDATIONS (Chapters 1-6) - 60 Total
-    { q: "Accidental Death and Disability (1966) is famously known as:", options: ["The Orange Book", "The White Paper", "The EMS Charter", "The NHTSA Guide"], answer: ["The White Paper"], type: "single", category: "Ch 1: EMS Systems", section: "Foundations", rationale: "This paper identified accidental death as a 'neglected disease' and spurred EMS growth." },
-    { q: "Which level of EMS is trained in IV therapy and limited advanced meds?", options: ["EMR", "EMT", "AEMT", "Paramedic"], answer: ["AEMT"], type: "single", category: "Ch 1: EMS Systems", section: "Foundations", rationale: "AEMTs bridge basic and advanced life support." },
-    { q: "What is the primary way to prevent disease transmission?", options: ["Gloves", "Handwashing", "Gowns", "Masks"], answer: ["Handwashing"], type: "single", category: "Ch 2: Safety", section: "Foundations", rationale: "Hand hygiene is the #1 clinical defense." },
-    { q: "What are the four elements of Negligence?", options: ["Duty, Breach, Damages, Cause", "Assault, Battery, Intent, Injury", "Duty, Error, Harm, Witness", "Law, Error, Cost, Pain"], answer: ["Duty, Breach, Damages, Cause"], type: "multiple", category: "Ch 3: Legal", section: "Foundations", rationale: "Negligence requires all 4 components: Duty, Breach, Damages, and Proximate Cause." },
-    { q: "In SBAR, what does 'B' stand for?", options: ["Basic Info", "Background", "Body System", "Blood Pressure"], answer: ["Background"], type: "single", category: "Ch 4: Communications", section: "Foundations", rationale: "SBAR = Situation, Background, Assessment, Recommendation." },
-    { q: "What does the prefix 'hypo-' mean?", options: ["Above", "Below", "Fast", "Slow"], answer: ["Below"], type: "single", category: "Ch 5: Terminology", section: "Foundations", rationale: "Hypo (low/below) vs Hyper (high/above)." },
-    { q: "Which lifting technique uses the legs and an upright back?", options: ["Power grip", "Power lift", "Deadlift", "Shoulder lift"], answer: ["Power lift"], type: "single", category: "Ch 6: Lifting", section: "Foundations", rationale: "Legs are strongest; back must remain straight." },
-    // ...[Chapters 1-6 content continues]...
-
-    // PATHOPHYSIOLOGY (Chapter 7) - 10 Total
-    { q: "What is the primary product of anaerobic metabolism?", options: ["Lactic Acid", "ATP", "Glucose", "Oxygen"], answer: ["Lactic Acid"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Without oxygen, cells produce lactic acid and very little energy." },
-    { q: "Shock caused by widespread vasodilation is categorized as:", options: ["Hypovolemic", "Distributive", "Cardiogenic", "Obstructive"], answer: ["Distributive"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Anaphylaxis and Sepsis are types of distributive shock." },
-    { q: "Perfusion is best defined as:", options: ["Breathing", "Adequate circulation to meet cell needs", "Heart beating", "Gas exchange"], answer: ["Adequate circulation to meet cell needs"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Perfusion is the delivery of O2/nutrients and removal of waste." },
-    { q: "A pulmonary embolism causes which type of shock?", options: ["Hypovolemic", "Distributive", "Cardiogenic", "Obstructive"], answer: ["Obstructive"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "A physical block to flow (embolism, tension pneumo) is obstructive." },
-    { q: "What happens to the Sodium-Potassium pump during severe shock?", options: ["Speeds up", "Fails due to lack of ATP", "Switches to calcium", "Remains normal"], answer: ["Fails due to lack of ATP"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Without ATP (energy), cellular pumps fail, leading to cell death." },
-    { q: "Which are signs of COMPENSATED shock?", options: ["Thirst", "Narrowing pulse pressure", "Tachycardia", "Hypotension"], answer: ["Thirst", "Narrowing pulse pressure", "Tachycardia"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Hypotension is the key sign of DECOMPENSATED shock." },
-    { q: "The Fick Principle describes components necessary for:", options: ["Lifting", "Oxygen reaching cells", "Legal duty", "Radio use"], answer: ["Oxygen reaching cells"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Fick Principle: O2 in air, working pump, enough RBCs." },
-    { q: "Which receptor causes vasoconstriction during the stress response?", options: ["Alpha-1", "Beta-1", "Beta-2", "Muscarinic"], answer: ["Alpha-1"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Alpha-1 constriction pushes blood to the core." },
-    { q: "Stroke Volume is defined as:", options: ["HR x BP", "Blood ejected per contraction", "Total body volume", "Flow speed"], answer: ["Blood ejected per contraction"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Cardiac Output = Stroke Volume x Heart Rate." },
-    { q: "In an adult, Decompensated Shock is often indicated by a systolic BP below:", options: ["120 mmHg", "100 mmHg", "90 mmHg", "60 mmHg"], answer: ["90 mmHg"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "90 mmHg is the classic threshold for decompensation." }
-];
-
-let sessionQuestions = [];
-let currentIdx = 0;
-let score = 0;
-let mode = '';
-let timerInterval;
-let timeLeft = 0;
-let categoryStats = {};
-
+// 1. ACCESS CONTROL & CONFIG
 function adjustSliderRange() {
     const topic = document.getElementById('topic-select').value;
     const slider = document.getElementById('question-slider');
@@ -43,6 +12,173 @@ function updateSliderLabel(val) {
     document.getElementById('question-count-label').innerText = val;
     document.getElementById('time-estimate-label').innerText = val * 2;
 }
+
+// 2. QUESTION BANK
+const quizData = [
+    // --- FOUNDATIONS (Chapters 1-6) ---
+    { q: "Accidental Death and Disability (1966) is famously known as:", options: ["The Orange Book", "The White Paper", "The EMS Charter", "The NHTSA Guide"], answer: ["The White Paper"], type: "single", category: "Ch 1: EMS Systems", section: "Foundations", rationale: "This paper identified accidental death as a 'neglected disease' and spurred EMS growth." },
+    { q: "Which level of EMS is trained in IV therapy and limited advanced meds?", options: ["EMR", "EMT", "AEMT", "Paramedic"], answer: ["AEMT"], type: "single", category: "Ch 1: EMS Systems", section: "Foundations", rationale: "AEMTs bridge basic and advanced life support." },
+    { q: "What is the primary way to prevent disease transmission?", options: ["Gloves", "Handwashing", "Gowns", "Masks"], answer: ["Handwashing"], type: "single", category: "Ch 2: Safety", section: "Foundations", rationale: "Hand hygiene is the #1 clinical defense." },
+    { q: "What are the four elements of Negligence?", options: ["Duty to act", "Breach of duty", "Damages", "Proximate cause", "Malice"], answer: ["Duty to act", "Breach of duty", "Damages", "Proximate cause"], type: "multiple", category: "Ch 3: Legal", section: "Foundations", rationale: "Negligence requires all 4 components: Duty, Breach, Damages, and Proximate Cause." },
+    { q: "In SBAR, what does 'B' stand for?", options: ["Basic Info", "Background", "Body System", "Blood Pressure"], answer: ["Background"], type: "single", category: "Ch 4: Communications", section: "Foundations", rationale: "SBAR = Situation, Background, Assessment, Recommendation." },
+    { q: "What does the prefix 'hypo-' mean?", options: ["Above", "Below", "Fast", "Slow"], answer: ["Below"], type: "single", category: "Ch 5: Terminology", section: "Foundations", rationale: "Hypo (low/below) vs Hyper (high/above)." },
+    { q: "Which lifting technique uses the legs and an upright back?", options: ["Power grip", "Power lift", "Deadlift", "Shoulder lift"], answer: ["Power lift"], type: "single", category: "Ch 6: Lifting", section: "Foundations", rationale: "Legs are strongest; back must remain straight." },
+
+    // --- PATHOPHYSIOLOGY & ELECTROLYTES (Integrated New Questions) ---
+    { 
+        q: "A 72-year-old patient with chronic hypertension presents with left ventricular enlargement. Which cellular adaptation is most likely occurring?", 
+        options: ["Atrophy", "Hypertrophy", "Hyperplasia", "Metaplasia"], 
+        answer: ["Hypertrophy"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Hypertrophy is an increase in the size of cells due to synthesis of more subcellular components, often seen in the left ventricle due to chronic high resistance from hypertension." 
+    },
+    
+    { 
+        q: "A patient with severe renal failure is most at risk for which of the following electrolyte imbalances? (Select all that apply)", 
+        options: ["Hyperkalemia", "Hypermagnesemia", "Hypercalcemia", "Hyperphosphatemia"], 
+        answer: ["Hyperkalemia", "Hypermagnesemia", "Hyperphosphatemia"], 
+        type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Renal failure leads to decreased excretion of potassium, magnesium, and phosphate. Calcium levels often have an inverse relationship with phosphate." 
+    },
+    { 
+        q: "A patient is hyperventilating due to a panic attack. Which acid-base disturbance and compensatory mechanism are expected?", 
+        options: ["Respiratory acidosis; renal bicarbonate retention", "Respiratory alkalosis; renal hydrogen ion resorption", "Metabolic acidosis; respiratory CO2 blow-off", "Respiratory alkalosis; renal bicarbonate excretion"], 
+        answer: ["Respiratory alkalosis; renal hydrogen ion resorption"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Hyperventilation leads to respiratory alkalosis. In alkalosis, the kidneys respond by resorbing hydrogen ions and excreting potassium." 
+    },
+    { 
+        q: "Which of the following are potential causes of obstructive shock? (Select all that apply)", 
+        options: ["Pericardial tamponade", "Tension pneumothorax", "Sepsis", "Pulmonary embolus"], 
+        answer: ["Pericardial tamponade", "Tension pneumothorax", "Pulmonary embolus"], 
+        type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Obstructive shock occurs when blood flow is blocked in the heart or great vessels. Sepsis is distributive shock." 
+    },
+    
+    { 
+        q: "What is the primary intracellular cation responsible for maintaining intracellular osmolarity?", 
+        options: ["Sodium", "Potassium", "Calcium", "Magnesium"], 
+        answer: ["Potassium"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Potassium (K+) is the major intracellular cation and is crucial for maintaining intracellular osmolarity and neuromuscular control." 
+    },
+    { 
+        q: "A patient presents with a serum sodium level of 130 mEq/L. This condition is known as:", 
+        options: ["Hypernatremia", "Hyponatremia", "Hypokalemia", "Hypercalcemia"], 
+        answer: ["Hyponatremia"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Hyponatremia is characterized by a serum sodium level of 135 mEq/L or less." 
+    },
+    { 
+        q: "Which findings are associated with the 'Alarm' stage of the General Adaptation Syndrome? (Select all that apply)", 
+        options: ["Release of catecholamines", "Decreased heart rate", "Increased blood glucose", "Exhaustion of resources"], 
+        answer: ["Release of catecholamines", "Increased blood glucose"], 
+        type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "The alarm stage involves the release of catecholamines (epinephrine/norepinephrine), which increases HR and blood glucose." 
+    },
+    { 
+        q: "A patient with a pH of 7.25 and a PCO2 of 55 mmHg is in which state?", 
+        options: ["Respiratory alkalosis", "Metabolic acidosis", "Respiratory acidosis", "Metabolic alkalosis"], 
+        answer: ["Respiratory acidosis"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "A pH below 7.35 is acidosis. High PCO2 (above 45 mmHg) indicates the cause is respiratory." 
+    },
+    
+    { 
+        q: "Identify the signs of hypocalcemia: (Select all that apply)", 
+        options: ["Muscle cramps", "Laryngospasm", "Tetany", "Polyuria"], 
+        answer: ["Muscle cramps", "Laryngospasm", "Tetany"], 
+        type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Hypocalcemia causes increased neuromuscular excitation leading to cramps, tetany, and laryngospasm. Polyuria is associated with hypercalcemia." 
+    },
+    { 
+        q: "What is the role of the Renin-Angiotensin-Aldosterone System (RAAS)?", 
+        options: ["To decrease blood pressure", "To regulate fluid balance and increase blood pressure", "To excrete sodium", "To decrease serum osmolarity"], 
+        answer: ["To regulate fluid balance and increase blood pressure"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "RAAS triggers salt/water retention and peripheral vasoconstriction to improve blood pressure." 
+    },
+    { 
+        q: "Which of the following may cause a high anion gap metabolic acidosis (MUDPILES)? (Select all that apply)", 
+        options: ["Diabetic ketoacidosis", "Salicylate poisoning", "Lactic acidosis", "Respiratory failure"], 
+        answer: ["Diabetic ketoacidosis", "Salicylate poisoning", "Lactic acidosis"], 
+        type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "MUDPILES stands for Methanol, Uremia, DKA, Lactic acidosis, and Salicylates. Respiratory failure causes respiratory acidosis." 
+    },
+    { 
+        q: "During anaerobic metabolism, what is the primary byproduct that leads to metabolic acidosis?", 
+        options: ["Carbon dioxide", "Lactic acid", "Bicarbonate", "Ketones"], 
+        answer: ["Lactic acid"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Inadequate perfusion forces cells into anaerobic metabolism, causing increased lactic acid production." 
+    },
+    { 
+        q: "A patient with a history of alcohol use disorder presents with tremors and tachycardia. Which imbalance is common in this population?", 
+        options: ["Hypermagnesemia", "Hypomagnesemia", "Hypernatremia", "Hypercalcemia"], 
+        answer: ["Hypomagnesemia"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Chronic alcohol use often leads to hypomagnesemia due to poor diet and impaired nutrient absorption." 
+    },
+    { 
+        q: "Which of the following are characteristics of Multiple Organ Dysfunction Syndrome (MODS)? (Select all that apply)", 
+        options: ["Overactivation of the complement system", "Microvascular thrombus formation", "Massive systemic immune response", "Instantaneous recovery with fluids"], 
+        answer: ["Overactivation of the complement system", "Microvascular thrombus formation", "Massive systemic immune response"], 
+        type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "MODS involves massive immune responses, complement overactivation, and microvascular thrombi." 
+    },
+    { 
+        q: "A normal serum potassium level is between:", 
+        options: ["135–145 mEq/L", "3.5–5.0 mEq/L", "8.6–10.2 mg/dL", "1.6–2.6 mEq/L"], 
+        answer: ["3.5–5.0 mEq/L"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "The normal serum level of potassium (K+) ranges from 3.5 to 5.0 mEq/L." 
+    },
+    { 
+        q: "Which hormone is released by the pituitary gland to cause the kidneys to reabsorb water?", 
+        options: ["Aldosterone", "Renin", "Antidiuretic Hormone (ADH)", "Epinephrine"], 
+        answer: ["Antidiuretic Hormone (ADH)"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "ADH causes the kidneys to reabsorb water, diluting the blood and normalizing serum osmolarity." 
+    },
+    { 
+        q: "Identify the primary EKG finding associated with Hypercalcemia:", 
+        options: ["Widened QRS", "Peaked T waves", "Shortened QT interval", "Prominent U waves"], 
+        answer: ["Shortened QT interval"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "The most common EKG finding associated with hypercalcemia is the shortening of the QT interval." 
+    },
+    
+    { 
+        q: "Which of the following can lead to cardiogenic shock? (Select all that apply)", 
+        options: ["Myocardial infarction", "Severe heart failure", "Cardiac dysrhythmias", "Hemorrhage"], 
+        answer: ["Myocardial infarction", "Severe heart failure", "Cardiac dysrhythmias"], 
+        type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Cardiogenic shock is caused by the heart's inability to pump. Hemorrhage causes hypovolemic shock." 
+    },
+    { 
+        q: "Metaplasia is defined as:", 
+        options: ["Decrease in cell size", "Increase in cell number", "Reversible replacement of one cell type with another", "Alteration in size and shape"], 
+        answer: ["Reversible replacement of one cell type with another"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "Metaplasia is the reversible adaptation where one adult cell type is replaced by another (e.g., smokers' airways)." 
+    },
+    { 
+        q: "What is the clinical definition of a hypertonic solution?", 
+        options: ["Lower osmotic pressure", "Higher osmotic pressure", "Equal osmotic pressure", "No solutes"], 
+        answer: ["Higher osmotic pressure"], 
+        type: "single", category: "Ch 7: Patho", section: "Pathophysiology",
+        rationale: "A hypertonic solution has a higher osmotic pressure (more solute) than the interstitial fluid." 
+    }
+];
+
+// --- QUIZ LOGIC ---
+let sessionQuestions = [];
+let currentIdx = 0;
+let score = 0;
+let mode = '';
+let timerInterval;
+let timeLeft = 0;
+let categoryStats = {};
 
 function startQuiz(selectedMode) {
     mode = selectedMode;
