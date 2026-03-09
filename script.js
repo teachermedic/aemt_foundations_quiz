@@ -20,7 +20,7 @@ const quizData = [
     { q: "A state of physical/emotional exhaustion is known as:", options: ["Eustress", "Burnout", "Acute stress", "Delayed stress"], answer: ["Burnout"], type: "single", category: "Ch 2: Safety & Wellness", section: "Foundations", rationale: "Burnout is chronic stress leading to emotional exhaustion." },
     { q: "Which hepatitis strain is most commonly spread through blood?", options: ["Hep A", "Hep B", "Hep E", "None"], answer: ["Hep B"], type: "single", category: "Ch 2: Safety & Wellness", section: "Foundations", rationale: "Hepatitis B is a major bloodborne concern for EMS." },
     { q: "If you are exposed to blood, you should FIRST:", options: ["Call your supervisor", "Wash the area with soap/water", "Go to the ER", "Finish the call"], answer: ["Wash the area with soap/water"], type: "single", category: "Ch 2: Safety & Wellness", section: "Foundations", rationale: "Immediate decontamination is the first clinical step." },
-    { q: "Which four factors are needed to prove negligence?", options: ["Duty, Breach, Damages, Proximate Cause", "Assault, Battery, Intent, Harm", "Duty, Speed, Error, Injury", "Law, Error, Cost, Pain"], answer: ["Duty to act", "Breach of duty", "Damages", "Proximate cause"], type: "multiple", category: "Ch 3: Medical/Legal", section: "Foundations", rationale: "Negligence requires all 4 factors: Duty, Breach, Damages, and Proximate cause." },
+    { q: "Which four factors are needed to prove negligence?", options: ["Duty to act", "Breach of duty", "Damages", "Proximate cause"], answer: ["Duty to act", "Breach of duty", "Damages", "Proximate cause"], type: "multiple", category: "Ch 3: Medical/Legal", section: "Foundations", rationale: "Negligence requires all 4 factors: Duty, Breach, Damages, and Proximate cause." },
     { q: "What type of consent is assumed when a patient is unconscious?", options: ["Expressed", "Informed", "Implied", "Involuntary"], answer: ["Implied"], type: "single", category: "Ch 3: Medical/Legal", section: "Foundations", rationale: "Implied consent assumes a reasonable person would want life-saving care." },
     { q: "If you leave a patient before a proper hand-off, you are guilty of:", options: ["Assault", "Abandonment", "Kidnapping", "Libel"], answer: ["Abandonment"], type: "single", category: "Ch 3: Medical/Legal", section: "Foundations", rationale: "Abandonment is the termination of care without transferring to equal/higher level." },
     { q: "Spoken defamation is called:", options: ["Libel", "Slander", "Tort", "Battery"], answer: ["Slander"], type: "single", category: "Ch 3: Medical/Legal", section: "Foundations", rationale: "Slander is spoken; Libel is written." },
@@ -61,51 +61,36 @@ const quizData = [
     { q: "A 'Bariatric Stretcher' is designed for:", options: ["Pediatric patients", "Obese patients", "Trauma patients", "Cardiac patients"], answer: ["Obese patients"], type: "single", category: "Ch 6: Lifting/Moving", section: "Foundations", rationale: "Bariatric equipment has higher weight capacities and wider frames." },
     { q: "What should you do before every lift?", options: ["Run to the patient", "Estimate the weight", "Call for backup immediately", "Lift with your back"], answer: ["Estimate the weight"], type: "single", category: "Ch 6: Lifting/Moving", section: "Foundations", rationale: "Assessing the load prevents injuries before they happen." },
 
-    // --- PATHOPHYSIOLOGY & ELECTROLYTES ---
-    { q: "A 72-year-old patient with chronic hypertension presents with left ventricular enlargement. Which cellular adaptation is most likely occurring?", options: ["Atrophy", "Hypertrophy", "Hyperplasia", "Metaplasia"], answer: ["Hypertrophy"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Hypertrophy is an increase in the size of cells due to synthesis of more subcellular components, often seen in the left ventricle due to chronic high resistance from hypertension." },
-    
-    { q: "A patient with severe renal failure is most at risk for which of the following electrolyte imbalances? (Select all that apply)", options: ["Hyperkalemia", "Hypermagnesemia", "Hypercalcemia", "Hyperphosphatemia"], answer: ["Hyperkalemia", "Hypermagnesemia", "Hyperphosphatemia"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Renal failure leads to decreased excretion of potassium, magnesium, and phosphate. Calcium levels often have an inverse relationship with phosphate." },
-    { q: "A patient is hyperventilating due to a panic attack. Which acid-base disturbance and compensatory mechanism are expected?", options: ["Respiratory acidosis; renal bicarbonate retention", "Respiratory alkalosis; renal hydrogen ion resorption", "Metabolic acidosis; respiratory CO2 blow-off", "Respiratory alkalosis; renal bicarbonate excretion"], answer: ["Respiratory alkalosis; renal hydrogen ion resorption"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Hyperventilation leads to respiratory alkalosis. In alkalosis, the kidneys respond by resorbing hydrogen ions and excreting potassium." },
-    { q: "Which of the following are potential causes of obstructive shock? (Select all that apply)", options: ["Pericardial tamponade", "Tension pneumothorax", "Sepsis", "Pulmonary embolus"], answer: ["Pericardial tamponade", "Tension pneumothorax", "Pulmonary embolus"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Obstructive shock occurs when blood flow is blocked in the heart or great vessels, such as in tamponade, tension pneumothorax, or large pulmonary emboli. Sepsis is distributive shock." },
-    { q: "What is the primary intracellular cation responsible for maintaining intracellular osmolarity?", options: ["Sodium", "Potassium", "Calcium", "Magnesium"], answer: ["Potassium"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Potassium (K+) is the major intracellular cation and is crucial for maintaining intracellular osmolarity and neuromuscular control." },
-    { q: "A patient presents with a serum sodium level of 130 mEq/L. This condition is known as:", options: ["Hypernatremia", "Hyponatremia", "Hypokalemia", "Hypercalcemia"], answer: ["Hyponatremia"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Hyponatremia is characterized by a serum sodium level of 135 mEq/L or less." },
-    { q: "Which findings are associated with the 'Alarm' stage of the General Adaptation Syndrome? (Select all that apply)", options: ["Release of catecholamines", "Decreased heart rate", "Increased blood glucose", "Exhaustion of resources"], answer: ["Release of catecholamines", "Increased blood glucose"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "The alarm stage involves the release of catecholamines (epinephrine/norepinephrine), which increases heart rate and blood glucose levels." },
-    { q: "A patient with a pH of 7.25 and a PCO2 of 55 mmHg is in which state?", options: ["Respiratory alkalosis", "Metabolic acidosis", "Respiratory acidosis", "Metabolic alkalosis"], answer: ["Respiratory acidosis"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "A pH below 7.35 is acidosis. High PCO2 (above 45 mmHg) indicates the cause is respiratory." },
-    
-    { q: "Identify the signs of hypocalcemia: (Select all that apply)", options: ["Muscle cramps", "Laryngospasm", "Tetany", "Polyuria"], answer: ["Muscle cramps", "Laryngospasm", "Tetany"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Hypocalcemia causes increased neuromuscular excitation leading to cramps, tetany, and laryngospasm. Polyuria is associated with hypercalcemia." },
-    { q: "What is the role of the Renin-Angiotensin-Aldosterone System (RAAS)?", options: ["To decrease blood pressure through vasodilation", "To regulate fluid balance and increase blood pressure", "To excrete sodium and retain potassium", "To decrease serum osmolarity"], answer: ["To regulate fluid balance and increase blood pressure"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "RAAS triggers salt and water retention and peripheral vasoconstriction to improve blood pressure and cardiac output." },
+    // --- PATHOPHYSIOLOGY ---
+    { q: "What is the primary product of anaerobic metabolism?", options: ["Lactic Acid", "ATP", "Glucose", "Oxygen"], answer: ["Lactic Acid"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Without oxygen, cells produce lactic acid and very little energy." },
     
 
-[Image of the Renin-Angiotensin-Aldosterone System (RAAS)]
+[Image of aerobic vs anaerobic metabolism]
 
-    { q: "Which of the following may cause a high anion gap metabolic acidosis (MUDPILES)? (Select all that apply)", options: ["Diabetic ketoacidosis", "Salicylate poisoning", "Lactic acidosis", "Respiratory failure"], answer: ["Diabetic ketoacidosis", "Salicylate poisoning", "Lactic acidosis"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "MUDPILES stands for causes like Methanol, Uremia, DKA, Lactic acidosis, and Salicylates. Respiratory failure causes respiratory acidosis." },
-    { q: "During anaerobic metabolism, what is the primary byproduct that leads to metabolic acidosis?", options: ["Carbon dioxide", "Lactic acid", "Bicarbonate", "Ketones"], answer: ["Lactic acid"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Inadequate perfusion forces cells into anaerobic metabolism, causing increased lactic acid production." },
-    { q: "A patient with a history of alcohol use disorder presents with tremors and tachycardia. Which imbalance is common in this population?", options: ["Hypermagnesemia", "Hypomagnesemia", "Hypernatremia", "Hypercalcemia"], answer: ["Hypomagnesemia"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Chronic alcohol use often leads to hypomagnesemia due to poor diet and impaired nutrient absorption." },
-    { q: "Which of the following are characteristics of Multiple Organ Dysfunction Syndrome (MODS)? (Select all that apply)", options: ["Overactivation of the complement system", "Microvascular thrombus formation", "Massive systemic immune response", "Instantaneous recovery with fluids"], answer: ["Overactivation of the complement system", "Microvascular thrombus formation", "Massive systemic immune response"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "MODS involves massive immune/inflammatory responses, complement overactivation, and coagulation leading to microvascular thrombi." },
-    { q: "A normal serum potassium level is between:", options: ["135–145 mEq/L", "3.5–5.0 mEq/L", "8.6–10.2 mg/dL", "1.6–2.6 mEq/L"], answer: ["3.5–5.0 mEq/L"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "The normal serum level of potassium (K+) ranges from 3.5 to 5.0 mEq/L." },
-    { q: "Which hormone is released by the pituitary gland to cause the kidneys to reabsorb water?", options: ["Aldosterone", "Renin", "Antidiuretic Hormone (ADH)", "Epinephrine"], answer: ["Antidiuretic Hormone (ADH)"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "ADH causes the kidneys to reabsorb water, resulting in dilution of the blood and a return of serum osmolarity to normal." },
-    { q: "Identify the primary EKG finding associated with Hypercalcemia:", options: ["Widened QRS", "Peaked T waves", "Shortened QT interval", "Prominent U waves"], answer: ["Shortened QT interval"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "The most common EKG finding associated with hypercalcemia is the shortening of the QT interval." },
-    { q: "Which of the following can lead to cardiogenic shock? (Select all that apply)", options: ["Myocardial infarction", "Severe heart failure", "Cardiac dysrhythmias", "Hemorrhage"], answer: ["Myocardial infarction", "Severe heart failure", "Cardiac dysrhythmias"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Cardiogenic shock is caused by the heart's inability to pump, often due to MI, failure, or dysrhythmias. Hemorrhage causes hypovolemic shock." },
-    { q: "Metaplasia is defined as:", options: ["Decrease in cell size", "Increase in cell number", "Reversible replacement of one adult cell type with another", "Alteration in size, shape, and organization of cells"], answer: ["Reversible replacement of one adult cell type with another"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Metaplasia is the reversible cellular adaptation where one adult cell type is replaced by another (e.g., in the airways of smokers)." },
-    { q: "What is the clinical definition of a hypertonic solution?", options: ["Lower osmotic pressure than interstitial fluid", "Higher osmotic pressure than interstitial fluid", "Equal osmotic pressure to interstitial fluid", "A solution containing no solutes"], answer: ["Higher osmotic pressure"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "A hypertonic solution has a relatively higher osmotic pressure (contains more solute) than the interstitial fluid." },
-
-    // --- MEDICAL EMERGENCIES (CHAPTERS 16-25) ---
-    { q: "A 68-year-old male with a history of COPD presents with acute dyspnea and cyanosis. Which finding would most strongly suggest he is relying on his hypoxic drive?", options: ["Elevated CO2 levels", "Low SpO2 despite high-flow O2", "Respiration stimulated by low O2 rather than high CO2", "Sudden onset of pulmonary edema"], answer: ["Respiration stimulated by low O2 rather than high CO2"], type: "single", category: "Ch 17: Respiratory", section: "Medical", rationale: "Hypoxic drive is a 'backup system' where the body uses chemoreceptors to stimulate breathing based on low oxygen levels because the brain has become insensitive to high CO2." },
-    { q: "Which signs are indicative of a patient in severe respiratory distress? (Select all that apply)", options: ["Tripod position", "Two-word dyspnea", "Pulse oximetry of 96% on room air", "Use of accessory muscles"], answer: ["Tripod position", "Two-word dyspnea", "Use of accessory muscles"], type: "multiple", category: "Ch 17: Respiratory", section: "Medical", rationale: "Severe distress is characterized by physical positioning (tripod), speaking difficulty, and extra muscular effort." },
+    { q: "Shock caused by widespread vasodilation is categorized as:", options: ["Hypovolemic", "Distributive", "Cardiogenic", "Obstructive"], answer: ["Distributive"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Anaphylaxis and Sepsis are types of distributive shock." },
+    { q: "Perfusion is best defined as:", options: ["Breathing", "Adequate circulation to meet cell needs", "Heart beating", "Gas exchange"], answer: ["Adequate circulation to meet cell needs"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Perfusion is the delivery of O2/nutrients and removal of waste." },
+    { q: "A pulmonary embolism causes which type of shock?", options: ["Hypovolemic", "Distributive", "Cardiogenic", "Obstructive"], answer: ["Obstructive"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "A physical block to flow (embolism, tension pneumo) is obstructive." },
+    { q: "What happens to the Sodium-Potassium pump during severe shock?", options: ["Speeds up", "Fails due to lack of ATP", "Switches to calcium", "Remains normal"], answer: ["Fails due to lack of ATP"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Without ATP (energy), cellular pumps fail, leading to cell death." },
+    { q: "Which are signs of COMPENSATED shock?", options: ["Thirst", "Narrowing pulse pressure", "Tachycardia", "Hypotension"], answer: ["Thirst", "Narrowing pulse pressure", "Tachycardia"], type: "multiple", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Hypotension is the key sign of DECOMPENSATED shock." },
+    { q: "The Fick Principle describes components necessary for:", options: ["Lifting", "Oxygen reaching cells", "Legal duty", "Radio use"], answer: ["Oxygen reaching cells"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Fick Principle: O2 in air, working pump, enough RBCs." },
     
-    { q: "What is the primary physiological goal of administering aspirin in suspected Acute Coronary Syndrome (ACS)?", options: ["Immediate pain relief", "Prevent further aggregation of platelets", "Dissolve an existing thrombus", "Decrease myocardial oxygen demand"], answer: ["Prevent further aggregation of platelets"], type: "single", category: "Ch 18: Cardiovascular", section: "Medical", rationale: "Aspirin prevents platelets from clumping together, which helps keep a clot from getting larger." },
-    { q: "A patient presents with sharp, tearing chest pain radiating to the back and a blood pressure discrepancy between arms. This is most consistent with:", options: ["Acute Myocardial Infarction", "Aortic Dissection", "Congestive Heart Failure", "Spontaneous Pneumothorax"], answer: ["Aortic Dissection"], type: "single", category: "Ch 18: Cardiovascular", section: "Medical", rationale: "Aortic dissection typically presents as sudden, 'tearing' pain radiating to the back with unequal radial pulses or BPs." },
-    { q: "Which conditions can mimic the symptoms of a stroke? (Select all that apply)", options: ["Hypoglycemia", "Postictal state", "Epidural hematoma", "Hypertension"], answer: ["Hypoglycemia", "Postictal state", "Epidural hematoma"], type: "multiple", category: "Ch 19: Neurologic", section: "Medical", rationale: "Low blood sugar, the recovery phase of a seizure, and intracranial bleeds can all present with focal neurologic deficits." },
-    { q: "What is the hallmark sign of the postictal state following a generalized tonic-clonic seizure?", options: ["Immediate return to baseline", "Progressive airway narrowing", "Altered mental status with gradual improvement", "Continued muscle rigidity"], answer: ["Altered mental status with gradual improvement"], type: "single", category: "Ch 19: Neurologic", section: "Medical", rationale: "The postictal state is a recovery period characterized by confusion or lethargy that slowly resolves." },
-    { q: "A patient with a history of chronic NSAID use complains of sudden severe epigastric pain and hematemesis. Which is most likely?", options: ["Diverticulitis", "Peptic Ulcer Disease", "Cholecystitis", "Appendicitis"], answer: ["Peptic Ulcer Disease"], type: "single", category: "Ch 20: GI/GU", section: "Medical", rationale: "NSAIDs are a major risk factor for peptic ulcers, which can cause upper GI bleeding (hematemesis)." },
-    { q: "Which of the following are potential causes of an 'acute abdomen'? (Select all that apply)", options: ["Pancreatitis", "Ectopic pregnancy", "Peritonitis", "Chronic renal failure"], answer: ["Pancreatitis", "Ectopic pregnancy", "Peritonitis"], type: "multiple", category: "Ch 20: GI/GU", section: "Medical", rationale: "An acute abdomen refers to sudden onset pain; chronic renal failure is a long-term (chronic) condition." },
-    { q: "A Type 1 diabetic is found unresponsive with deep, rapid respirations and a fruity breath odor. This pattern is known as:", options: ["Cheyne-Stokes", "Kussmaul", "Biot's", "Agonal"], answer: ["Kussmaul"], type: "single", category: "Ch 21: Endocrine", section: "Medical", rationale: "Kussmaul respirations are the body's attempt to blow off CO2 to compensate for metabolic acidosis in DKA." },
-    { q: "Which are contraindications for oral glucose? (Select all that apply)", options: ["Unconscious", "Unable to swallow", "BGL of 55 mg/dL", "Stroke"], answer: ["Unconscious", "Unable to swallow"], type: "multiple", category: "Ch 21: Endocrine", section: "Medical", rationale: "A patient must be awake and able to protect their own airway to receive oral glucose without risk of aspiration." },
-    { q: "What is the primary difference between an allergic reaction and anaphylaxis?", options: ["Skin involvement", "Systemic multi-system failure and life-threatening compromise", "Second exposure requirement", "Insect sting cause"], answer: ["Systemic multi-system failure and life-threatening compromise"], type: "single", category: "Ch 22: Immunology", section: "Medical", rationale: "Anaphylaxis is defined by the presence of life-threatening respiratory or circulatory compromise." },
-    { q: "Which signs would you expect in an opioid overdose? (Select all that apply)", options: ["Pinpoint pupils", "Respiratory depression", "Tachycardia", "Altered mental status"], answer: ["Pinpoint pupils", "Respiratory depression", "Altered mental status"], type: "multiple", category: "Ch 23: Toxicology", section: "Medical", rationale: "The opioid toxidrome consists of the 'triad': CNS depression, respiratory depression, and miosis (pinpoint pupils)." },
-    { q: "When managing a patient with agitated delirium, what is the AEMT's primary priority?", options: ["Diagnosing the cause", "Chemical restraint", "Personal safety and defusing the situation", "Full secondary assessment"], answer: ["Personal safety and defusing the situation"], type: "single", category: "Ch 24: Psychiatric", section: "Medical", rationale: "Safety is paramount; you must ensure the scene is safe before attempting clinical interventions." },
-    { q: "A 22-year-old female has severe lower abdominal pain and spotting; last period was 6 weeks ago. Suspect:", options: ["Pelvic Inflammatory Disease", "Ectopic Pregnancy", "Endometriosis", "Ovarian Cyst"], answer: ["Ectopic Pregnancy"], type: "single", category: "Ch 25: Gynecologic", section: "Medical", rationale: "Any female of childbearing age with abdominal pain and spotting is an ectopic pregnancy until proven otherwise." },
-    { q: "Cyanosis is a sign of which physiological state?", options: ["Hyperglycemia", "Inadequate oxygenation of the blood", "Internal hemorrhage", "CO exposure"], answer: ["Inadequate oxygenation of the blood"], type: "single", category: "Ch 16: Overview", section: "Medical", rationale: "Cyanosis is the bluish discoloration of skin resulting from poor circulation or inadequate oxygenation." }
+    { q: "Which receptor causes vasoconstriction during the stress response?", options: ["Alpha-1", "Beta-1", "Beta-2", "Muscarinic"], answer: ["Alpha-1"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Alpha-1 constriction pushes blood to the core." },
+    { q: "Stroke Volume is defined as:", options: ["HR x BP", "Blood ejected per contraction", "Total body volume", "Flow speed"], answer: ["Blood ejected per contraction"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Cardiac Output = Stroke Volume x Heart Rate." },
+    { q: "In an adult, Decompensated Shock is often indicated by a systolic BP below:", options: ["120 mmHg", "100 mmHg", "90 mmHg", "60 mmHg"], answer: ["90 mmHg"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "90 mmHg is the classic threshold for decompensation." },
+
+    // --- MEDICAL EMERGENCIES ---
+    { q: "A 68-year-old male with COPD presents with acute dyspnea and cyanosis. Which finding suggests hypoxic drive?", options: ["Elevated CO2", "Low SpO2 despite O2", "Respiration stimulated by low O2 rather than high CO2", "Sudden pulmonary edema"], answer: ["Respiration stimulated by low O2 rather than high CO2"], type: "single", category: "Ch 17: Respiratory", section: "Medical", rationale: "Hypoxic drive uses low O2 levels to stimulate breathing when CO2 sensitivity is lost." },
+    { q: "Which signs indicate severe respiratory distress? (Select all that apply)", options: ["Tripod position", "Two-word dyspnea", "SpO2 of 96%", "Use of accessory muscles"], answer: ["Tripod position", "Two-word dyspnea", "Use of accessory muscles"], type: "multiple", category: "Ch 17: Respiratory", section: "Medical", rationale: "Severe distress is shown through position, speech limit, and muscle use." },
+    
+
+[Image of respiratory distress symptoms]
+
+    { q: "What is the primary goal of aspirin in suspected ACS?", options: ["Pain relief", "Prevent platelet aggregation", "Dissolve existing thrombus", "Decrease heart rate"], answer: ["Prevent platelet aggregation"], type: "single", category: "Ch 18: Cardiovascular", section: "Medical", rationale: "Aspirin prevents further clotting by stopping platelets from clumping." },
+    { q: "Sharp, tearing chest pain radiating to the back with unequal BPs in arms is likely:", options: ["MI", "Aortic Dissection", "CHF", "Pneumothorax"], answer: ["Aortic Dissection"], type: "single", category: "Ch 18: Cardiovascular", section: "Medical", rationale: "Aortic dissection is characterized by 'tearing' pain and pressure discrepancies." },
+    { q: "A patient with Type 1 diabetes is found unresponsive with fruity breath. This pattern is:", options: ["Cheyne-Stokes", "Kussmaul", "Biot's", "Agonal"], answer: ["Kussmaul"], type: "single", category: "Ch 21: Endocrine", section: "Medical", rationale: "Kussmaul respirations attempt to blow off CO2 in DKA." },
+    { q: "Signs of opioid overdose include: (Select all that apply)", options: ["Pinpoint pupils", "Respiratory depression", "Tachycardia", "Altered mental status"], answer: ["Pinpoint pupils", "Respiratory depression", "Altered mental status"], type: "multiple", category: "Ch 23: Toxicology", section: "Medical", rationale: "The opioid triad is CNS/Resp depression and pinpoint pupils." },
+    
+    { q: "The postictal state is best described as:", options: ["Return to baseline", "Airway narrowing", "Altered mental status with gradual improvement", "Muscle rigidity"], answer: ["Altered mental status with gradual improvement"], type: "single", category: "Ch 19: Neurologic", section: "Medical", rationale: "Postictal is the recovery period following a seizure." }
 ];
 
 // --- QUIZ LOGIC ---
@@ -120,7 +105,10 @@ let categoryStats = {};
 function adjustSliderRange() {
     const topic = document.getElementById('topic-select').value;
     const slider = document.getElementById('question-slider');
+    
+    // Check actual length of quizData based on filter
     const availableCount = topic === "All" ? quizData.length : quizData.filter(i => i.section === topic).length;
+    
     slider.max = availableCount;
     if (parseInt(slider.value) > availableCount) slider.value = availableCount;
     updateSliderLabel(slider.value);
@@ -135,7 +123,6 @@ function startQuiz(selectedMode) {
     mode = selectedMode;
     const selectedTopic = document.getElementById('topic-select').value;
     const numToPull = parseInt(document.getElementById('question-slider').value);
-    
     let filteredBank = selectedTopic === "All" ? [...quizData] : quizData.filter(i => i.section === selectedTopic);
     const finalPull = Math.min(numToPull, filteredBank.length);
 
@@ -150,7 +137,6 @@ function startQuiz(selectedMode) {
     });
 
     sessionQuestions = sortedBank.slice(0, finalPull);
-
     if (mode === 'exam') {
         sessionQuestions.sort(() => Math.random() - 0.5);
         timeLeft = sessionQuestions.length * 2 * 60; 
@@ -199,24 +185,24 @@ function showQuestion() {
 function handleAction() {
     const selected = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(i => i.value);
     if (selected.length === 0) return alert("Select an answer.");
-
     const q = sessionQuestions[currentIdx];
-    const isCorrect = (q.type === 'single') ? (selected[0] === q.answer[0]) : (selected.length === q.answer.length && selected.every(v => q.answer.includes(v)));
-
+    
+    const correctCheck = (q.type === 'single') ? (selected[0] === q.answer[0]) : (selected.length === q.answer.length && selected.every(v => q.answer.includes(v)));
+    
     let history = JSON.parse(localStorage.getItem('eric_field_notes_history') || "{}");
     if (!history[q.q]) history[q.q] = { pass: 0, fail: 0 };
-    isCorrect ? history[q.q].pass++ : history[q.q].fail++;
+    correctCheck ? history[q.q].pass++ : history[q.q].fail++;
     localStorage.setItem('eric_field_notes_history', JSON.stringify(history));
 
     if (!categoryStats[q.category]) categoryStats[q.category] = { correct: 0, total: 0 };
     categoryStats[q.category].total++;
-    if (isCorrect) categoryStats[q.category].correct++;
+    if (correctCheck) categoryStats[q.category].correct++;
 
     if (mode === 'review') {
         const fb = document.getElementById('feedback');
-        fb.innerHTML = isCorrect ? `<b style="color:green">Correct!</b>` : `<b style="color:red">Incorrect.</b> Answer: ${q.answer.join(", ")}`;
+        fb.innerHTML = correctCheck ? `<b style="color:green">Correct!</b>` : `<b style="color:red">Incorrect.</b> Answer: ${q.answer.join(", ")}`;
         fb.innerHTML += `<br><small>${q.rationale}</small>`;
-        if (isCorrect) score++;
+        if (correctCheck) score++;
         const btn = document.getElementById('action-btn');
         btn.innerText = "Next Question";
         btn.onclick = () => {
@@ -225,7 +211,7 @@ function handleAction() {
             else showResults();
         };
     } else {
-        if (isCorrect) score++;
+        if (correctCheck) score++;
         currentIdx++;
         currentIdx < sessionQuestions.length ? showQuestion() : showResults();
     }
@@ -236,9 +222,8 @@ function showResults() {
     document.getElementById('quiz-area').style.display = 'none';
     document.getElementById('results-area').style.display = 'block';
     const percent = Math.round((score / sessionQuestions.length) * 100);
-    document.getElementById('score-display').innerText = `Total Score: ${score} / ${sessionQuestions.length}`;
+    document.getElementById('score-display').innerText = `Score: ${score} / ${sessionQuestions.length}`;
     document.getElementById('percentage-display').innerText = `${percent}%`;
-    
     let breakdownHTML = "<strong>Mastery by Chapter:</strong><br>";
     for (const cat in categoryStats) {
         let catPercent = Math.round((categoryStats[cat].correct / categoryStats[cat].total) * 100);
@@ -247,5 +232,6 @@ function showResults() {
     document.getElementById('category-breakdown').innerHTML = breakdownHTML;
     document.getElementById('pass-status').innerHTML = percent >= 70 ? "<b style='color:green'>PASSED</b>" : "<b style='color:red'>RE-STUDY REQUIRED</b>";
 }
+
 // THIS LINE IS THE FIX FOR THE SLIDER
 window.onload = adjustSliderRange;
