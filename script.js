@@ -158,7 +158,78 @@ const quizData = [
     { q: "In the 6 Ps of musculoskeletal assessment, which is often the earliest sign of compartment syndrome?", options: ["Pain out of proportion", "Pulselessness", "Paralysis", "Pallor"], answer: ["Pain out of proportion"], type: "single", category: "Ch 33: Ortho", section: "Trauma", rationale: "Pain out of proportion to the injury is the earliest and most reliable sign of compartment syndrome." },
     
     { q: "Which gas law explains the formation of nitrogen bubbles in 'The Bends'?", options: ["Boyle's Law", "Henry's Law", "Dalton's Law", "Charles's Law"], answer: ["Henry's Law"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "Henry's Law states that the amount of gas dissolved in a liquid is proportional to the pressure of that gas." },
-    { q: "A patient in 'Heat Stroke' is distinguished by which clinical finding?", options: ["Tachycardia", "Hot skin", "Altered Mental Status", "Muscle cramps"], answer: ["Altered Mental Status"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "CNS dysfunction (Altered Mental Status) is the hallmark differentiator of Heat Stroke." }
+    { q: "A patient in 'Heat Stroke' is distinguished by which clinical finding?", options: ["Tachycardia", "Hot skin", "Altered Mental Status", "Muscle cramps"], answer: ["Altered Mental Status"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "CNS dysfunction (Altered Mental Status) is the hallmark differentiator of Heat Stroke." },
+        // --- HIGH RIGOR TRAUMA (FROM CHAPTERS 26-34) ---
+    {
+        q: "What is the primary pathophysiology behind the development of 'The Lethal Triad' in a major trauma patient?",
+        options: ["Acidosis, Coagulopathy, and Hypothermia", "Hypertension, Bradycardia, and Irregular Respirations", "JVD, Muffled Heart Sounds, and Hypotension", "Tachycardia, Hypotension, and Tachypnea"],
+        answer: ["Acidosis, Coagulopathy, and Hypothermia"],
+        type: "single", category: "Ch 27: Bleeding", section: "Trauma",
+        rationale: "The Lethal Triad is a self-reinforcing cycle where hypothermia and acidosis impair clotting, leading to more bleeding."
+    },
+    {
+        q: "A patient with a traumatic brain injury (TBI) presents with a 'blown' pupil on the right side. This is most likely a sign of:",
+        options: ["Oculomotor nerve compression from brain herniation", "Optic nerve damage from a blowout fracture", "Sympathetic nervous system surge", "A normal variation in 20% of the population"],
+        answer: ["Oculomotor nerve compression from brain herniation"],
+        type: "single", category: "Ch 30: Head/Spine", section: "Trauma",
+        rationale: "Increased intracranial pressure forces the brain against the skull, compressing the third cranial nerve (oculomotor)."
+    },
+    {
+        q: "Which gas law explains why an occluded air-filled organ (like the middle ear) can rupture during a dive's descent?",
+        options: ["Boyle's Law", "Henry's Law", "Dalton's Law", "Charles's Law"],
+        answer: ["Boyle's Law"],
+        type: "single", category: "Ch 34: Environmental", section: "Trauma",
+        rationale: "Boyle’s Law states that as pressure increases during descent, the volume of gas decreases, causing a vacuum effect if not equalized."
+    },
+    {
+        q: "A patient has a traumatic aortic disruption. Which mechanism of injury is the most common cause?",
+        options: ["Rapid deceleration (3rd collision)", "Penetrating gunshot wound", "Crush injury to the chest", "Low-velocity falls"],
+        answer: ["Rapid deceleration (3rd collision)"],
+        type: "single", category: "Ch 31: Chest", section: "Trauma",
+        rationale: "In the 'third collision,' the heart and aorta move forward after the chest wall stops, causing a shearing force."
+    },
+    {
+        q: "Define 'Perfusion Pressure' of the brain (CPP) as a mathematical formula:",
+        options: ["MAP - ICP", "BP + Pulse", "Systolic - Diastolic", "ICP / MAP"],
+        answer: ["MAP - ICP"],
+        type: "single", category: "Ch 30: Head/Spine", section: "Trauma",
+        rationale: "Cerebral Perfusion Pressure is the difference between Mean Arterial Pressure and Intracranial Pressure."
+    },
+    {
+        q: "What is the correct field management for a responsive patient with a suspected pelvic fracture?",
+        options: ["Manual stabilization and application of a pelvic binder", "Perform a pelvic 'rock' to check for stability", "Apply a traction splint", "Place the patient in a Trendelenburg position"],
+        answer: ["Manual stabilization and application of a pelvic binder"],
+        type: "single", category: "Ch 33: Ortho", section: "Trauma",
+        rationale: "Pelvic binders provide stability and help reduce internal volume to control life-threatening bleeding."
+    },
+    {
+        q: "A patient with a suspected simple pneumothorax begins to show JVD and a falling blood pressure. You should immediately:",
+        options: ["Perform needle decompression", "Apply a non-rebreather mask", "Auscultate for bowel sounds in the chest", "Administer a 500mL fluid bolus"],
+        answer: ["Perform needle decompression"],
+        type: "single", category: "Ch 31: Chest", section: "Trauma",
+        rationale: "Conversion of a simple pneumothorax to a tension pneumothorax requires immediate decompression to restore cardiac output."
+    },
+    {
+        q: "Which type of shock results from a large pulmonary embolism?",
+        options: ["Obstructive", "Distributive", "Cardiogenic", "Hypovolemic"],
+        answer: ["Obstructive"],
+        type: "single", category: "Ch 14: Shock", section: "Trauma",
+        rationale: "A physical block in the circulatory system (like an embolus) is categorized as obstructive shock."
+    },
+    {
+        q: "In 'Crush Syndrome,' why is the patient at high risk for V-Fib after the object is removed?",
+        options: ["Sudden release of potassium and metabolic acids", "Sudden drop in blood pressure", "Massive influx of calcium into the heart", "Air embolism"],
+        answer: ["Sudden release of potassium and metabolic acids"],
+        type: "single", category: "Ch 28: Soft-Tissue", section: "Trauma",
+        rationale: "Releasing the pressure allows toxic intracellular products like potassium (Hyperkalemia) to flood the central circulation."
+    },
+    {
+        q: "What is the hallmark differentiator of Heat Stroke from Heat Exhaustion?",
+        options: ["Altered Mental Status", "Tachycardia", "Hot, dry skin", "Muscle cramps"],
+        answer: ["Altered Mental Status"],
+        type: "single", category: "Ch 34: Environmental", section: "Trauma",
+        rationale: "Heat Stroke is defined by core temperature elevation coupled with CNS dysfunction (AMS or seizures)."
+    }
     // (Add more following this pattern)
     // ... Additional questions follow this exact syntax.
 ];
@@ -184,12 +255,14 @@ function adjustSliderRange() {
     // This unlocks the slider to the full length of your bank
     slider.max = availableCount;
     
-    // If the slider is at 20 but you have 130, this lets it move
-    if (parseInt(slider.value) > availableCount || parseInt(slider.value) <= 20) {
-        slider.value = availableCount > 20 ? 20 : availableCount;
-    }
+    // Updates the count and estimate immediately
     updateSliderLabel(slider.value);
 }
+
+// This makes sure the slider "un-sticks" the moment the page opens
+window.onload = function() {
+    adjustSliderRange();
+};
 
 // Add this to the very bottom of your script.js file
 window.onload = function() {
