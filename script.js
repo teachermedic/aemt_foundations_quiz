@@ -255,19 +255,11 @@ function adjustSliderRange() {
     // Set the max to the actual number of questions available
     slider.max = availableCount;
     
-    // If the current slider value is now higher than what's available in this section,
-    // lower it to the new max. Otherwise, leave it where the user set it.
+    // Safety check: if current slider value > available, set it to the count
     if (parseInt(slider.value) > availableCount) {
         slider.value = availableCount;
     }
     
-    updateSliderLabel(slider.value);
-}
-
-// Add this to the very bottom of your script.js file
-window.onload = function() {
-    adjustSliderRange();
-};
     updateSliderLabel(slider.value);
 }
 
@@ -366,7 +358,7 @@ function showResults() {
     document.getElementById('score-display').innerText = `Score: ${score} / ${sessionQuestions.length} (${percent}%)`;
 }
 
-// FORCE INITIALIZE SLIDER
+// FORCE INITIALIZE SLIDER ON LOAD
 window.onload = function() {
     adjustSliderRange();
 };
