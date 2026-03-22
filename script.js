@@ -252,10 +252,10 @@ function adjustSliderRange() {
     const filtered = topic === "All" ? quizData : quizData.filter(i => i.section === topic);
     const availableCount = filtered.length;
     
-    // Set the max to the actual number of questions available
+    // Dynamically sets the max based on the number of questions in the bank
     slider.max = availableCount;
     
-    // Safety check: if current slider value > available, set it to the count
+    // Prevents the slider from being stuck higher than the available questions
     if (parseInt(slider.value) > availableCount) {
         slider.value = availableCount;
     }
@@ -279,6 +279,7 @@ function startQuiz(selectedMode) {
     document.getElementById('setup-area').style.display = 'none';
     document.getElementById('quiz-area').style.display = 'block';
 
+    // Shuffle and pick the exact number of questions selected
     sessionQuestions = filteredBank.sort(() => Math.random() - 0.5).slice(0, numToPull);
 
     if (mode === 'exam') {
@@ -341,8 +342,13 @@ function handleAction() {
         btn.innerText = "Next Question";
         btn.onclick = () => {
             currentIdx++;
-            if (currentIdx < sessionQuestions.length) { showQuestion(); btn.innerText = "Submit Answer"; btn.onclick = handleAction; }
-            else showResults();
+            if (currentIdx < sessionQuestions.length) { 
+                showQuestion(); 
+                btn.innerText = "Submit Answer"; 
+                btn.onclick = handleAction; 
+            } else {
+                showResults();
+            }
         };
     } else {
         currentIdx++;
@@ -358,7 +364,7 @@ function showResults() {
     document.getElementById('score-display').innerText = `Score: ${score} / ${sessionQuestions.length} (${percent}%)`;
 }
 
-// FORCE INITIALIZE SLIDER ON LOAD
+// THIS INITIALIZES THE SLIDER WHEN THE PAGE LOADS
 window.onload = function() {
     adjustSliderRange();
 };
