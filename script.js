@@ -132,7 +132,34 @@ const quizData = [
     { q: "A 'Scaphoid' (hollow) abdomen in trauma suggests:", options: ["Ruptured Spleen", "Diaphragmatic Rupture", "Internal bleeding", "Evisceration"], answer: ["Diaphragmatic Rupture"], type: "single", category: "Ch 32: Abdominal", section: "Trauma", rationale: "Contents moving from the abdomen into the chest leave a hollow appearance." },
     { q: "Which organ is most commonly injured in blunt abdominal trauma?", options: ["Spleen", "Liver", "Bladder", "Stomach"], answer: ["Liver"], type: "single", category: "Ch 32: Abdominal", section: "Trauma", rationale: "The liver is the largest and most frequently injured solid organ in the abdomen." },
     { q: "What is the priority treatment for an open pelvic fracture?", options: ["Splint the legs", "Apply a pelvic binder", "Apply a tourniquet", "Apply a traction splint"], answer: ["Apply a pelvic binder"], type: "single", category: "Ch 33: Ortho", section: "Trauma", rationale: "Pelvic binders reduce internal volume and stabilize the fracture to limit bleeding." },
-    { q: "In diving emergencies, Boyle’s Law relates to which phase of the dive?", options: ["Descent only", "Ascent only", "Bottom time", "Both Ascent and Descent"], answer: ["Both Ascent and Descent"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "Boyle's Law states volume is inversely proportional to pressure, affecting air-filled spaces as depth changes." }
+    { q: "In diving emergencies, Boyle’s Law relates to which phase of the dive?", options: ["Descent only", "Ascent only", "Bottom time", "Both Ascent and Descent"], answer: ["Both Ascent and Descent"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "Boyle's Law states volume is inversely proportional to pressure, affecting air-filled spaces as depth changes." },
+    // --- PATHOPHYSIOLOGY: ACID-BASE RIGOR ---
+    { q: "A patient hypoventilating from an opioid OD is likely in which state?", options: ["Respiratory Alkalosis", "Respiratory Acidosis", "Metabolic Alkalosis", "Metabolic Acidosis"], answer: ["Respiratory Acidosis"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "CO2 retention leads to a drop in pH, causing respiratory acidosis." },
+    
+
+[Image of respiratory acidosis vs alkalosis chart]
+
+    { q: "The Bicarbonate Buffer System manages pH by balancing which two components?", options: ["Oxygen and Nitrogen", "Carbon Dioxide and Bicarbonate", "Sodium and Potassium", "Calcium and Magnesium"], answer: ["Carbon Dioxide and Bicarbonate"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "The body uses the lungs to regulate CO2 and the kidneys to regulate Bicarbonate." },
+    { q: "In a state of Acidosis, the heart becomes:", options: ["More sensitive to Epinephrine", "Less responsive to catecholamines", "Hyper-excitable", "More efficient at pumping"], answer: ["Less responsive to catecholamines"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Acidosis decreases myocardial contractility and makes the heart less responsive to the body's natural stimulants." },
+
+    // --- TRAUMA: SHOCK & BLEEDING RIGOR ---
+    { q: "Which Class of Hemorrhage involves 30-40% blood loss and the onset of hypotension?", options: ["Class I", "Class II", "Class III", "Class IV"], answer: ["Class III"], type: "single", category: "Ch 27: Bleeding", section: "Trauma", rationale: "Class III is the point where compensatory mechanisms fail to maintain blood pressure." },
+    { q: "The 'Lethal Triad' in trauma consists of which three conditions? (Select all that apply)", options: ["Acidosis", "Coagulopathy", "Hypothermia", "Hypertension"], answer: ["Acidosis", "Coagulopathy", "Hypothermia"], type: "multiple", category: "Ch 27: Bleeding", section: "Trauma", rationale: "Acidosis, Coagulopathy, and Hypothermia create a cycle that makes shock irreversible." },
+    { q: "What is the target Mean Arterial Pressure (MAP) for 'permissive hypotension' in internal trauma?", options: ["40-50 mmHg", "60-65 mmHg", "80-90 mmHg", "110-120 mmHg"], answer: ["60-65 mmHg"], type: "single", category: "Ch 14: Shock", section: "Trauma", rationale: "Targeting a lower MAP (60-65) helps maintain vital organ perfusion without 'popping the clot' formed at the injury site." },
+
+    // --- TRAUMA: HEAD & CHEST RIGOR ---
+    { q: "Cushing's Triad (Hypertension, Bradycardia, Irregular Respirations) indicates:", options: ["Hypovolemic Shock", "Increased Intracranial Pressure", "Cardiac Tamponade", "Pulmonary Embolism"], answer: ["Increased Intracranial Pressure"], type: "single", category: "Ch 30: Head/Spine", section: "Trauma", rationale: "Cushing's triad is a late sign of brain herniation or significantly high ICP." },
+    
+    { q: "Beck's Triad (JVD, muffled heart sounds, and narrowing pulse pressure) indicates:", options: ["Tension Pneumothorax", "Cardiac Tamponade", "Hemothorax", "Flail Chest"], answer: ["Cardiac Tamponade"], type: "single", category: "Ch 31: Chest", section: "Trauma", rationale: "Cardiac Tamponade occurs when fluid fills the pericardial sac, compressing the heart." },
+    
+    { q: "Referred pain to the left shoulder (Kehr's sign) in a trauma patient likely indicates injury to the:", options: ["Liver", "Spleen", "Kidney", "Diaphragm"], answer: ["Spleen"], type: "single", category: "Ch 32: Abdominal", section: "Trauma", rationale: "Splenic blood irritates the phrenic nerve, which refers pain to the left shoulder." },
+
+    // --- TRAUMA: ORTHO & ENVIRONMENTAL RIGOR ---
+    { q: "In the 6 Ps of musculoskeletal assessment, which is often the earliest sign of compartment syndrome?", options: ["Pain out of proportion", "Pulselessness", "Paralysis", "Pallor"], answer: ["Pain out of proportion"], type: "single", category: "Ch 33: Ortho", section: "Trauma", rationale: "Pain out of proportion to the injury is the earliest and most reliable sign of compartment syndrome." },
+    
+    { q: "Which gas law explains the formation of nitrogen bubbles in 'The Bends'?", options: ["Boyle's Law", "Henry's Law", "Dalton's Law", "Charles's Law"], answer: ["Henry's Law"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "Henry's Law states that the amount of gas dissolved in a liquid is proportional to the pressure of that gas." },
+    { q: "A patient in 'Heat Stroke' is distinguished by which clinical finding?", options: ["Tachycardia", "Hot skin", "Altered Mental Status", "Muscle cramps"], answer: ["Altered Mental Status"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "CNS dysfunction (Altered Mental Status) is the hallmark differentiator of Heat Stroke." }
+    // (Add more following this pattern)
     // ... Additional questions follow this exact syntax.
 ];
 
