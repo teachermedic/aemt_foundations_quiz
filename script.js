@@ -234,7 +234,7 @@ const quizData = [
     // ... Additional questions follow this exact syntax.
 ];
 
-// --- QUIZ LOGIC ---
+// --- QUIZ LOGIC (REPLACE EVERYTHING BELOW YOUR QUESTIONS WITH THIS) ---
 let sessionQuestions = [];
 let currentIdx = 0;
 let score = 0;
@@ -249,13 +249,14 @@ function adjustSliderRange() {
     if (!topicSelect || !slider) return;
 
     const topic = topicSelect.value;
+    // This counts how many questions actually exist in your bank for this section
     const filtered = topic === "All" ? quizData : quizData.filter(i => i.section === topic);
     const availableCount = filtered.length;
     
-    // Dynamically sets the max based on the number of questions in the bank
+    // This UNLOCKS the slider max to your actual bank size
     slider.max = availableCount;
     
-    // Prevents the slider from being stuck higher than the available questions
+    // If the slider is stuck at a number higher than available, pull it back to max
     if (parseInt(slider.value) > availableCount) {
         slider.value = availableCount;
     }
@@ -276,10 +277,12 @@ function startQuiz(selectedMode) {
     const numToPull = parseInt(document.getElementById('question-slider').value);
     let filteredBank = topic === "All" ? [...quizData] : quizData.filter(i => i.section === topic);
 
+    if (filteredBank.length === 0) return alert("No questions found in this section!");
+
     document.getElementById('setup-area').style.display = 'none';
     document.getElementById('quiz-area').style.display = 'block';
 
-    // Shuffle and pick the exact number of questions selected
+    // Shuffle and pick the exact number of questions
     sessionQuestions = filteredBank.sort(() => Math.random() - 0.5).slice(0, numToPull);
 
     if (mode === 'exam') {
@@ -364,7 +367,7 @@ function showResults() {
     document.getElementById('score-display').innerText = `Score: ${score} / ${sessionQuestions.length} (${percent}%)`;
 }
 
-// THIS INITIALIZES THE SLIDER WHEN THE PAGE LOADS
+// THIS IS THE MOST IMPORTANT PART: RUNS ONCE WHEN PAGE LOADS
 window.onload = function() {
     adjustSliderRange();
 };
