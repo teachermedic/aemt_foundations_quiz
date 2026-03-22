@@ -252,17 +252,17 @@ function adjustSliderRange() {
     const filtered = topic === "All" ? quizData : quizData.filter(i => i.section === topic);
     const availableCount = filtered.length;
     
-    // This unlocks the slider to the full length of your bank
+    // Set the max to the actual number of questions available
     slider.max = availableCount;
     
-    // Updates the count and estimate immediately
+    // If the current slider value is now higher than what's available in this section,
+    // lower it to the new max. Otherwise, leave it where the user set it.
+    if (parseInt(slider.value) > availableCount) {
+        slider.value = availableCount;
+    }
+    
     updateSliderLabel(slider.value);
 }
-
-// This makes sure the slider "un-sticks" the moment the page opens
-window.onload = function() {
-    adjustSliderRange();
-};
 
 // Add this to the very bottom of your script.js file
 window.onload = function() {
