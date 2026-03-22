@@ -10,28 +10,99 @@ const quizData = [
     { q: "Which document establishes the 'Scope of Practice' for an AEMT within a specific state?", options: ["NHTSA Curriculum", "The State EMS Office / Medical Practice Act", "NREMT Handbook", "Federal DOT"], answer: ["The State EMS Office / Medical Practice Act"], type: "single", category: "Ch 1: EMS Systems", section: "Foundations", rationale: "State legislation defines the actual legal scope of practice." },
     { q: "A patient refuses care but is altered with a life-threat. Treat under:", options: ["Expressed Consent", "Informed Consent", "Implied Consent", "Involuntary Consent"], answer: ["Implied Consent"], type: "single", category: "Ch 3: Legal", section: "Foundations", rationale: "Implied consent is used when a patient cannot legally consent but needs life-saving care." },
     { q: "What is the difference between Libel and Slander?", options: ["Libel is spoken; Slander is written", "Libel is written; Slander is spoken", "Physical vs Verbal", "No difference"], answer: ["Libel is written; Slander is spoken"], type: "single", category: "Ch 3: Legal", section: "Foundations", rationale: "Libel = Written defamation; Slander = Spoken defamation." },
+    { q: "In the 'Five Stages of Grief,' which stage involves a patient trying to make a deal to postpone the inevitable?", options: ["Denial", "Bargaining", "Anger", "Depression"], answer: ["Bargaining"], type: "single", category: "Ch 2: Wellness", section: "Foundations", rationale: "Bargaining is the third stage of the Kübler-Ross model where the patient tries to negotiate for more time." },
 
-    // --- PATHOPHYSIOLOGY (CH 7) ---
+    // --- PATHOPHYSIOLOGY (CH 7 & ACID-BASE) ---
     { q: "What is the primary product of anaerobic metabolism?", options: ["Lactic Acid", "ATP", "Glucose", "Oxygen"], answer: ["Lactic Acid"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Without oxygen, cells produce lactic acid and very little energy." },
     { q: "Shock caused by widespread vasodilation is categorized as:", options: ["Hypovolemic", "Distributive", "Cardiogenic", "Obstructive"], answer: ["Distributive"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Anaphylaxis and Sepsis are types of distributive shock." },
-    { q: "A pulmonary embolism causes which type of shock?", options: ["Hypovolemic", "Distributive", "Cardiogenic", "Obstructive"], answer: ["Obstructive"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "A physical block to flow is obstructive shock." },
     { q: "A patient hypoventilating from an opioid OD is likely in:", options: ["Respiratory Alkalosis", "Respiratory Acidosis", "Metabolic Alkalosis", "Metabolic Acidosis"], answer: ["Respiratory Acidosis"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "CO2 retention leads to a drop in pH, causing respiratory acidosis." },
     { q: "Kussmaul respirations in DKA are an attempt to compensate for:", options: ["Metabolic Acidosis", "Metabolic Alkalosis", "Respiratory Acidosis", "Hypoxemia"], answer: ["Metabolic Acidosis"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Rapid breathing 'blows off' CO2 (acid) to raise blood pH." },
-    { q: "What is the normal pH range of human arterial blood?", options: ["7.0 - 7.1", "7.35 - 7.45", "7.45 - 7.55", "6.8 - 7.8"], answer: ["7.35 - 7.45"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "This narrow window is essential for cellular enzyme function." },
+    { q: "Which of the following is the primary chemical buffer system in the human body?", options: ["Protein", "Bicarbonate", "Phosphate", "Hemoglobin"], answer: ["Bicarbonate"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "The Bicarbonate-Carbonic Acid system is the most important extracellular buffer." },
     { q: "A hyperventilating patient with an EtCO2 of 22 is in:", options: ["Respiratory Alkalosis", "Respiratory Acidosis", "Metabolic Acidosis", "Normal state"], answer: ["Respiratory Alkalosis"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "Excessive loss of CO2 removes acid, raising the pH." },
+    { q: "What is the normal pH range of human arterial blood?", options: ["7.0 - 7.1", "7.35 - 7.45", "7.45 - 7.55", "6.8 - 7.8"], answer: ["7.35 - 7.45"], type: "single", category: "Ch 7: Patho", section: "Pathophysiology", rationale: "This narrow window is essential for cellular enzyme function." },
 
     // --- MEDICAL (CH 16-25) ---
+    { q: "How does CPAP improve oxygenation in pulmonary edema?", options: ["Increasing HR", "Forcing fluid out of alveoli and into capillaries", "Improves blood pressure", "Causing vasodilation"], answer: ["Forcing fluid out of alveoli and into capillaries"], type: "single", category: "Ch 17: Respiratory", section: "Medical", rationale: "CPAP uses pressure to push fluid from the air sacs back into the bloodstream." },
     { q: "A patient has stroke symptoms that resolve in 45 minutes. This was a:", options: ["Ischemic Stroke", "Hemorrhagic Stroke", "TIA", "Hypoglycemia"], answer: ["TIA"], type: "single", category: "Ch 19: Neurologic", section: "Medical", rationale: "Transient Ischemic Attacks resolve completely within 24 hours." },
     { q: "Cushing's Syndrome is characterized by:", options: ["Moon-face and buffalo hump", "Extreme weight loss", "Low blood glucose", "Hypotension"], answer: ["Moon-face and buffalo hump"], type: "single", category: "Ch 21: Endocrine", section: "Medical", rationale: "Caused by hyperadrenalism (excess cortisol)." },
     { q: "A patient with 'tearing' back pain and unequal BPs in arms likely has:", options: ["Heart Attack", "Aortic Dissection", "Kidney Stones", "Gallstones"], answer: ["Aortic Dissection"], type: "single", category: "Ch 18: Cardiovascular", section: "Medical", rationale: "Unequal BP and tearing pain are classic for dissection." },
-    { q: "First line AEMT med for active anaphylaxis?", options: ["Benadryl IV", "Albuterol Neb", "Epi 1:1,000 IM", "Solu-Medrol"], answer: ["Epi 1:1,000 IM"], type: "single", category: "Ch 22: Immunology", section: "Medical", rationale: "Epinephrine is the only immediate life-saving reversal agent." },
     { q: "Kussmaul respirations are unique to which condition?", options: ["HHNS", "DKA", "Hypoglycemia", "Stroke"], answer: ["DKA"], type: "single", category: "Ch 21: Endocrine", section: "Medical", rationale: "Indicates the body is trying to blow off acid to compensate for ketones." },
+    { q: "Tapping the patient's facial nerve and observing a twitch (Chvostek's sign) indicates:", options: ["Trousseau's sign", "Chvostek's sign", "Murphy's sign", "Cullen's sign"], answer: ["Chvostek's sign"], type: "single", category: "Ch 7: Patho", section: "Medical", rationale: "This is a hallmark of hypocalcemia, indicating neuromuscular excitability." },
+    { q: "A 54 year old is found lethargic with rapid, deep respirations, and high glucose. How should you manage this patient?", options: ["Ventilate with PPV using a BVM", "Open and secure the airway", "Hyperventilate", "Check pupils"], answer: ["Open and secure the airway"], type: "single", category: "Ch 21: Endocrine", section: "Medical", rationale: "In an unresponsive patient, the primary priority is always the Airway." },
+    { q: "Mittelschmerz refers to:", options: ["Endometriosis", "Ovulation pain", "Amenorrhea", "PID"], answer: ["Ovulation pain"], type: "single", category: "Ch 25: Gynecologic", section: "Medical", rationale: "Mittelschmerz is the sharp, localized pain felt during ovulation." },
 
-    // --- TRAUMA (CH 26-34) ---
-    { q: "Beck's Triad (JVD, muffled heart sounds, low BP) indicates:", options: ["Tension Pneumo", "Cardiac Tamponade", "Hemothorax", "Flail Chest"], answer: ["Cardiac Tamponade"], type: "single", category: "Ch 31: Chest", section: "Trauma", rationale: "Fluid in the pericardial sac restricts heart movement." },
-    { q: "Kehr's Sign (left shoulder pain) indicates injury to the:", options: ["Liver", "Spleen", "Appendix", "Bladder"], answer: ["Spleen"], type: "single", category: "Ch 32: Abdomen", section: "Trauma", rationale: "Referred pain from diaphragmatic irritation due to splenic blood." },
-    { q: "The 6 Ps of musculoskeletal assessment help identify:", options: ["Shock", "Compartment Syndrome", "Infection", "Concussion"], answer: ["Compartment Syndrome"], type: "multiple", category: "Ch 33: Ortho", section: "Trauma", rationale: "Assesses neurovascular compromise." },
-    { q: "A cold-water drowning patient is not dead until they are:", options: ["Warm and dead", "No pulse for 10 mins", "Core temp is 90F", "Pupils fixed"], answer: ["Warm and dead"], type: "single", category: "Ch 34: Environmental", section: "Trauma", rationale: "Hypothermia protects the brain; warm them before calling it." }
+    // --- TRAUMA & ENVIRONMENTAL (CH 26-34) ---
+    {
+        q: "Which collision in a motor vehicle accident is most likely to cause a 'coup-contrecoup' brain injury?",
+        options: ["First (car vs object)", "Second (occupant vs interior)", "Third (organs vs body wall)", "Fourth"],
+        answer: ["Third (organs vs body wall)"],
+        type: "single", category: "Ch 26: MOI", section: "Trauma",
+        rationale: "The third collision involves the organs striking the interior body wall, causing brain or aortic injuries."
+    },
+    {
+        q: "Which Class of Hemorrhage is defined by 30-40% blood loss and a significant drop in systolic BP?",
+        options: ["Class I", "Class II", "Class III", "Class IV"],
+        answer: ["Class III"],
+        type: "single", category: "Ch 27: Bleeding", section: "Trauma",
+        rationale: "Class III involves marked tachycardia and hypotension as compensation fails."
+    },
+    {
+        q: "Beck's Triad (JVD, muffled heart sounds, and narrowing pulse pressure) indicates:",
+        options: ["Tension Pneumothorax", "Cardiac Tamponade", "Hemothorax", "Commotio Cordis"],
+        answer: ["Cardiac Tamponade"],
+        type: "single", category: "Ch 31: Chest", section: "Trauma",
+        rationale: "Cardiac Tamponade occurs when fluid fills the pericardial sac, compressing the heart."
+    },
+    {
+        q: "Referred pain to the left shoulder (Kehr's sign) is a classic indicator of injury to which organ?",
+        options: ["Liver", "Spleen", "Kidneys", "Pancreas"],
+        answer: ["Spleen"],
+        type: "single", category: "Ch 32: Abdominal", section: "Trauma",
+        rationale: "Splenic blood irritates the diaphragm, referred to the left shoulder via the phrenic nerve."
+    },
+    {
+        q: "What are the '6 Ps' of musculoskeletal assessment? (Select all that apply)",
+        options: ["Pain", "Paresthesia", "Pulselessness", "Pallor", "Paralysis", "Pressure"],
+        answer: ["Pain", "Paresthesia", "Pulselessness", "Pallor", "Paralysis", "Pressure"],
+        type: "multiple", category: "Ch 33: Ortho", section: "Trauma",
+        rationale: "These are critical for identifying Compartment Syndrome or neurovascular compromise."
+    },
+    {
+        q: "The 'Lethal Triad' in trauma consists of which three conditions? (Select all that apply)",
+        options: ["Acidosis", "Coagulopathy", "Hypothermia", "Hypertension"],
+        answer: ["Acidosis", "Coagulopathy", "Hypothermia"],
+        type: "multiple", category: "Ch 27: Bleeding", section: "Trauma",
+        rationale: "Acidosis, Coagulopathy, and Hypothermia are a self-reinforcing cycle of death in major trauma."
+    },
+    {
+        q: "A patient with a head injury presents with Hypertension, Bradycardia, and Irregular respirations. This is:",
+        options: ["Beck's Triad", "Cushing's Triad", "Virchow's Triad", "The Bends"],
+        answer: ["Cushing's Triad"],
+        type: "single", category: "Ch 30: Head/Spine", section: "Trauma",
+        rationale: "Cushing's Triad is a late sign of significantly increased intracranial pressure (ICP)."
+    },
+    {
+        q: "A cold-water drowning patient is not considered dead until they are:",
+        options: ["Warm and dead", "Pulseless for 30 mins", "Core temp reaches 90F", "No shock advised"],
+        answer: ["Warm and dead"],
+        type: "single", category: "Ch 34: Environmental", section: "Trauma",
+        rationale: "Hypothermia protects vital organs; resuscitation must continue until the patient is warmed."
+    },
+    {
+        q: "Which gas law explains decompression sickness ('The Bends') in divers?",
+        options: ["Boyle's Law", "Henry's Law", "Dalton's Law", "Charles's Law"],
+        answer: ["Henry's Law"],
+        type: "single", category: "Ch 34: Environmental", section: "Trauma",
+        rationale: "Henry's Law states that the amount of gas dissolved in a liquid is proportional to the partial pressure of that gas."
+    },
+    {
+        q: "What is the primary pathophysiology behind 'Crush Syndrome'?",
+        options: ["Immediate cardiac arrest", "Release of toxic metabolic byproducts after pressure is removed", "External hemorrhage", "Nerve death"],
+        answer: ["Release of toxic metabolic byproducts after pressure is removed"],
+        type: "single", category: "Ch 28: Soft-Tissue", section: "Trauma",
+        rationale: "Releasing pressure allows myoglobin and potassium to flood the system, causing renal failure and arrhythmias."
+    }
+    // ... Additional questions follow this exact syntax.
 ];
 
 // --- QUIZ LOGIC ---
@@ -53,9 +124,9 @@ function adjustSliderRange() {
     const availableCount = filtered.length;
     
     slider.max = availableCount;
-    // Fix: If slider is at 0 or higher than available, reset to 10 or max
+    // Fix: If slider is at 0 or higher than available, reset to 20 or max
     if (parseInt(slider.value) > availableCount || parseInt(slider.value) === 0) {
-        slider.value = availableCount > 10 ? 10 : availableCount;
+        slider.value = availableCount > 20 ? 20 : availableCount;
     }
     updateSliderLabel(slider.value);
 }
@@ -98,4 +169,64 @@ function startTimer() {
 
 function showQuestion() {
     const data = sessionQuestions[currentIdx];
-    document.getElementById('progress').innerText = `Question ${
+    document.getElementById('progress').innerText = `Question ${currentIdx + 1} of ${sessionQuestions.length} | ${data.category}`;
+    document.getElementById('question-text').innerText = data.q;
+    const container = document.getElementById('options-container');
+    container.innerHTML = '';
+    document.getElementById('feedback').innerText = '';
+
+    data.options.forEach(opt => {
+        const div = document.createElement('div');
+        div.className = "option-item";
+        const input = document.createElement('input');
+        input.type = data.type === 'single' ? 'radio' : 'checkbox';
+        input.name = "option";
+        input.value = opt;
+        input.id = opt;
+        const label = document.createElement('label');
+        label.htmlFor = opt;
+        label.innerText = opt;
+        div.appendChild(input);
+        div.appendChild(label);
+        div.onclick = () => input.click();
+        container.appendChild(div);
+    });
+}
+
+function handleAction() {
+    const selected = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(i => i.value);
+    if (selected.length === 0) return alert("Select an answer.");
+    const q = sessionQuestions[currentIdx];
+    const isCorrect = selected.length === q.answer.length && selected.every(v => q.answer.includes(v));
+    
+    if (isCorrect) score++;
+
+    if (mode === 'review') {
+        const fb = document.getElementById('feedback');
+        fb.innerHTML = isCorrect ? `<b style="color:green">Correct!</b>` : `<b style="color:red">Incorrect.</b> Answer: ${q.answer.join(", ")}`;
+        fb.innerHTML += `<br><small>${q.rationale}</small>`;
+        const btn = document.getElementById('action-btn');
+        btn.innerText = "Next Question";
+        btn.onclick = () => {
+            currentIdx++;
+            if (currentIdx < sessionQuestions.length) { showQuestion(); btn.innerText = "Submit Answer"; btn.onclick = handleAction; }
+            else showResults();
+        };
+    } else {
+        currentIdx++;
+        currentIdx < sessionQuestions.length ? showQuestion() : showResults();
+    }
+}
+
+function showResults() {
+    clearInterval(timerInterval);
+    document.getElementById('quiz-area').style.display = 'none';
+    document.getElementById('results-area').style.display = 'block';
+    const percent = Math.round((score / sessionQuestions.length) * 100);
+    document.getElementById('score-display').innerText = `Score: ${score} / ${sessionQuestions.length} (${percent}%)`;
+}
+
+// FORCE INITIALIZE SLIDER
+window.onload = function() {
+    adjustSliderRange();
+};
